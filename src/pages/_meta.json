@@ -1,0 +1,66 @@
+{
+  "index": {
+    "title": "Introduction",
+    "display": "hidden",
+    "theme": {
+      "breadcrumb": false,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "typesetting": "article"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "href": "/",
+    "type": "page"
+  },
+  "about": {
+    "title": "Basics",
+    "href": "/basic",
+    "type": "page"
+  },
+  "software": {
+    "title": "Software",
+    "href": "/software",
+    "type": "page"
+  },
+  "sop": {
+    "title": "SOPs",
+    "type": "menu",
+    "items": [
+      {
+        "title": "GMC",
+        "href": "/GMC"
+      },
+      {
+        "title": "TWR",
+        "href": "/TWR"
+      },
+      {
+        "title": "APS",
+        "href": "/APS"
+      },
+      {
+        "title": "ACS",
+        "href": "/ACS"
+      },
+      {
+        "title": "AFIS/FIS",
+        "href": "/FIS"
+      }
+    ]
+  },
+  "external": {
+    "title": "External",
+    "href": "/external",
+    "type": "page"
+  },
+  "404": {
+    "type": "page",
+    "theme": {
+      "timestamp": false,
+      "typesetting": "article"
+    }
+  }
+}

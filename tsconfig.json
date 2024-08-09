@@ -37,6 +37,8 @@
     "**/*.cjs",
     "**/*.js",
     "**/*.jsx",
+    "**/*.mdx",
+    "**/*.md",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]

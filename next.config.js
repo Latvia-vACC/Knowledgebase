@@ -17,6 +17,12 @@ const withNextra = nextra({
 
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  transpilePackages: ["geist"],
+  // i18n: {
+  //   defaultLocale: "en",
+  //   locales: ["en", "lv"]
+  // }
+};
 
 export default withNextra(config);
