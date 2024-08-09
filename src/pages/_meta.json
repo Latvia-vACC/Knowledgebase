@@ -6,8 +6,7 @@
       "breadcrumb": false,
       "sidebar": false,
       "toc": false,
-      "pagination": false,
-      "typesetting": "article"
+      "pagination": false
     }
   },
   "home": {
@@ -15,7 +14,7 @@
     "href": "/",
     "type": "page"
   },
-  "about": {
+  "basic": {
     "title": "Basics",
     "href": "/basic",
     "type": "page"
@@ -31,23 +30,23 @@
     "items": [
       {
         "title": "GMC",
-        "href": "/GMC"
+        "href": "/SOP/GMC"
       },
       {
         "title": "TWR",
-        "href": "/TWR"
+        "href": "/SOP/TWR"
       },
       {
         "title": "APS",
-        "href": "/APS"
+        "href": "/SOP/APS"
       },
       {
         "title": "ACS",
-        "href": "/ACS"
+        "href": "/SOP/ACS"
       },
       {
         "title": "AFIS/FIS",
-        "href": "/FIS"
+        "href": "/SOP/FIS"
       }
     ]
   },
