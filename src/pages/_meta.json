@@ -5,13 +5,12 @@
     "theme": {
       "breadcrumb": false,
       "sidebar": false,
-      "toc": false,
       "pagination": false
     }
   },
-  "home": {
-    "title": "Home",
-    "href": "/",
+  "about": {
+    "title": "About",
+    "href": "/about",
     "type": "page"
   },
   "basic": {

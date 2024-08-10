@@ -36,6 +36,10 @@ const themeConfig = {
     .
   </span>
   },
+  banner: {
+    key: "not-real",
+    text: "❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗"
+  },
   logo: Logo,
   primaryHue: 350.73,
   primarySaturation: 64.4,
