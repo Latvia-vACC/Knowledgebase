@@ -13,13 +13,13 @@
     "href": "/about",
     "type": "page"
   },
-  "basic": {
+  "basics": {
     "title": "Basics",
-    "href": "/basic",
+    "href": "/basics",
     "type": "page"
   },
   "software": {
-    "title": "Software",
+    "title": "Software Guides",
     "href": "/software",
     "type": "page"
   },
@@ -29,28 +29,28 @@
     "items": [
       {
         "title": "GMC",
-        "href": "/SOP/GMC"
+        "href": "/sop/gmc"
       },
       {
         "title": "TWR",
-        "href": "/SOP/TWR"
+        "href": "/sop/twr"
       },
       {
         "title": "APS",
-        "href": "/SOP/APS"
+        "href": "/sop/aps"
       },
       {
         "title": "ACS",
-        "href": "/SOP/ACS"
+        "href": "/sop/acs"
       },
       {
         "title": "AFIS/FIS",
-        "href": "/SOP/FIS"
+        "href": "/sop/fis"
       }
     ]
   },
   "external": {
-    "title": "External",
+    "title": "External Resources",
     "href": "/external",
     "type": "page"
   },

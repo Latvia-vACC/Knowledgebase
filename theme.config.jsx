@@ -27,19 +27,23 @@ const themeConfig = {
   editLink: {
     text: "Edit this page on GitHub →"
   },
+  toc: {
+    backToTop: true,
+    title: "Table of Contents"
+  },
   footer: {
-    text: <span>
-    MIT 2006-{new Date().getFullYear()} ©{' '}
+    text: 
+    <span>
+      MIT 2006-{new Date().getFullYear()} ©{' '}
     <Link href="https://lv-vacc.org" target="_blank">
       Latvia vACC
     </Link>
-    .
   </span>
   },
-  banner: {
-    key: "not-real",
-    text: "❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗"
-  },
+  // banner: {
+  //   key: "not-real",
+  //   text: <span className="whitespace-normal overflow-visible text-wrap">❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗</span>
+  // },
   logo: Logo,
   primaryHue: 350.73,
   primarySaturation: 64.4,
