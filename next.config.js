@@ -9,10 +9,19 @@ await import("./src/env.js");
 
 // @ts-expect-error Types
 import nextra from 'nextra';
+import { remarkMdxDisableExplicitJsx } from 'nextra/mdx-plugins/remark-mdx-disable-explicit-jsx';
 
 const withNextra = nextra({
   theme: 'nextra-theme-docs',
-  themeConfig: './theme.config.jsx'
+  themeConfig: './theme.config.jsx',
+  mdxOptions: {
+    remarkPlugins: [
+      [
+        remarkMdxDisableExplicitJsx,
+        { whiteList: ['table', 'thead', 'tbody', 'tr', 'th', 'td'] }
+      ]
+    ]
+  }
 })
 
 
