@@ -1,0 +1,57 @@
+---
+title: Reading METAR and SNOWTAM
+description: Reading encoded weather information is important for both pilots and controllers!
+---
+
+# Reading METAR and SNOWTAM
+
+One of the most important skills for an aviation enthusiast or a professional is understanding how meteorological conditions affect their daily work. In aviation weather information is codified using special standardised formats: METAR, SNOWTAM, and TAF.
+
+## METAR
+
+**Meteorological Aerodrome Report (METAR)** is a short string of all-capital characters and numbers that encompasses most important meteorological information about a given airfield. Sometimes METAR can also contain a SNOWTAM (Snow Warning to Airmen). Here is an example of a METAR from the Rīga airport (EVRA/RIX).
+
+```md filename="METAR"
+EVRA 260000Z 29002KT 7000 TSRA FEW023CB BKN026 04/03 Q1022 TEMPO 2000 +GR
+```
+
+The METAR above can be decoded as follows:
+
+- `EVRA` – the ICAO code of the aerodrome reported – RIX Riga Airport
+- `260000Z` – the day of the month and time of report (UTC) – 26th day of the month, 00:00 UTC
+- `29002KT` – surface wind – 290 degrees at 2 knots
+- `7000` – horizontal visibility at runway threshold – 7000 meters
+- `TSRA` – weather conditions – thunderstorm and rain
+- `FEW023CB` – clouds – few clouds at 2300 feet, cumulonimbus
+- `BKN026` – clouds – broken at 2600 feet
+- `04/03` – temperature and dew point – temperature 4°C, dew point 3°C
+- `Q1022` – barometric pressure (QNH) – 1022 hPa (hectopascals)
+- `TEMPO` – temporary changes expected. Most of the time this value is NOSIG, which means 'no significant change expected', but in this example it is TEMPO to show most of the possible quirks of a METAR
+- `2000` – horizontal visibility – can temporarily reduce to 2000 meters
+- `+GR` – weather conditions – heavy hail (+ means 'heavy' and GR means 'hail')
+
+Of course, there are many other weather conditions that may appear in a METAR, different types of clouds and additional data. While this example is enough to explain the general structure of a METAR, a full explanation with all other codes is awailable on [Wikipedia](https://en.wikipedia.org/wiki/METAR).
+
+## SNOWTAM
+
+**Snow Warning to Airmen (SNOWTAM)** is a short string of numerical codes (if withing a METAR) or letter codes (if within a NOTAM) that reports information about contamination on 1 or more runways at an airport. Here is an example of a SNOWTAM.
+
+```md filename="SNOWTAM"
+R18/699391
+```
+
+Same as a METAR, a SNOWTAM can be split into parts to decode it. A SNOWTAM consists of 5 parts and can be split as follows.
+
+```md filename="SNOWTAM split into parts" /R18/ /93/ /91/ /6/ /9/
+R18/6 9 93 91
+```
+
+The SNOWTAM can be decoded as follows:
+
+- `R18` – this SNOWTAM is valid for runway 18. If this position shows `R88`, the SNOWTAM applies to all runways.
+- `6` – type of deposit – slush
+- `9` – extent of contamination – 51% to 100% of runway covered
+- `93` – depth of deposit – 150 millimetres
+- `91` – breaking conditions – breaking action poor
+
+While SNOWTAMs might feel a lot more cryptic than METARs, they are much less complicated. Since this example is not comprehensive, here is [a full table of possible SNOWTAM values](/assets/SNOWTAM.pdf).

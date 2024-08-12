@@ -9,6 +9,9 @@ import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
 
 const Logo = () => {
   const { theme, systemTheme } = useTheme();
+
+  console.log(theme, systemTheme)
+
   return <Image src={theme === "system" ? systemTheme === 'dark' ? logo_dark : logo_light : theme === "dark" ? logo_dark : logo_light} alt="Latvia vACC" />
 }
 
@@ -23,6 +26,9 @@ const themeConfig = {
   },
   search: {
     placeholder: "Search knowledgebase..."
+  },
+  feedback: {
+    content: "Any feedback? Click here! →"
   },
   editLink: {
     text: "Edit this page on GitHub →"
@@ -45,8 +51,14 @@ const themeConfig = {
   //   text: <span className="whitespace-normal overflow-visible text-wrap">❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗</span>
   // },
   logo: Logo,
-  primaryHue: 350.73,
-  primarySaturation: 64.4,
+  primaryHue: {
+    light: 350.73,
+    dark: 342,
+  },
+  primarySaturation: {
+    light: 64.4,
+    dark: 100
+  },
   useNextSeoProps() {
     const { asPath } = useRouter();
     if (asPath !== '/') {

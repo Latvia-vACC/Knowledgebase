@@ -1,0 +1,41 @@
+---
+title: Reading TAF
+description: Reading encoded weather information is important for both pilots and controllers!
+---
+
+# Reading TAF
+
+**Terminal Aerodrome Forecast (TAF)** is a 24-hour forecast of weather expected at the aerodrome in question. All abbreviations, codes and values that can be used inside a METAR can be also seen in a TAF and vice-versa. Here is an example of a TAF.
+
+```md filename="TAF"
+TAF EVRA 031700Z 0318/0418 32007KT 9999 SCT040 TEMPO 0318/0320 SCT030CB PROB40 TEMPO 0321/0403 0700 FG BKN001
+```
+
+Same as METAR and SNOWTAM, a TAF can be split into parts. The 1st part always identifies the airport and the time of publication, all other parts are weather forecasts for periods of time roughly within the next 24 hours. The TAF above can be split into parts and decoded as follows.
+
+1. TAF EVRA 031700Z
+2. 0318/0418 32007KT 9999 SCT040
+3. TEMPO 0318/0320 SCT030CB
+4. PROB40 TEMPO 0321/0403 0700 FG BKN001
+
+```md filename="TAF decoded"
+1. TAF for RIX Riga Airport on the 3rd day of the month at 1700Z
+
+2. FROM 3rd at 1800Z TILL 4th at 1800Z the following is expected:
+   WIND 320 degrees at 7 knots
+   VISIBILITY greater than 10 kilometres
+   CLOUDS scattered at 4000 feet
+
+3. CONDITIONS WILL BE TEMPORAIRLY CHANGED UP TO 50% OF THE TIME
+   FROM 3rd at 1800Z TILL 3rd at 2000Z the following is expected:
+   CLOUDS scattered at 3000 feet, cumulonimbus
+
+4. WITH PROBABILITY OF 40%
+   CONDITIONS WILL BE TEMPORAIRLY CHANGED UP TO 50% OF THE TIME
+   FROM 3rd at 2100Z TILL 4th at 0300Z the following is expected:
+   VISIBILITY 700 meters
+   FOG
+   CLOUDS broken at 100 feet
+```
+
+Once again, all weather condition codes are available on [Wikipedia](https://en.wikipedia.org/wiki/METAR) and more information on TAF structure is also available on [Wikipedia](https://en.wikipedia.org/wiki/Terminal_aerodrome_forecast).
