@@ -10,13 +10,12 @@ import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
 const Logo = () => {
   const { theme, systemTheme } = useTheme();
 
-  console.log(theme, systemTheme)
-
   return <Image src={theme === "system" ? systemTheme === 'dark' ? logo_dark : logo_light : theme === "dark" ? logo_dark : logo_light} alt="Latvia vACC" />
 }
 
 /** @type {import("nextra-theme-docs").DocsThemeConfig} */
 const themeConfig = {
+
   docsRepositoryBase: "https://github.com/Latvia-vACC/Knowledgebase/tree/master",
   project: {
     link: "https://github.com/Latvia-vACC/Knowledgebase",
@@ -61,15 +60,33 @@ const themeConfig = {
   },
   useNextSeoProps() {
     const { asPath } = useRouter();
+
     if (asPath !== '/') {
+      // @ts-expect-error This will not be undefined
+      const sanitisedPath = asPath.split("/").at(-1).replaceAll("-", " ").split(" ")
+      for (let i = 0; i < sanitisedPath.length; i++) {
+      // @ts-expect-error This will not be undefined
+        sanitisedPath[i] = sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1)
+      }
+
       return {
         themeColor: "#9d2235",
-        titleTemplate: '%s –  Latvia vACC Knowledgebase'
+        titleTemplate: "%s –  Latvia vACC Knowledgebase",
+        openGraph: {
+          images: [{
+            url: `https://kb.lv-vacc.org/api/og?title=${sanitisedPath.join(" ")}`
+          }]
+        }
       }
     }
 
     return {
       themeColor: "#9d2235",
+      openGraph: {
+        images: [{
+          url: "https://kb.lv-vacc.org/api/og?title=Welcome"
+        }]
+      }
     }
   }
 };
