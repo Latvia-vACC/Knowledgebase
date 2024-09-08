@@ -17,6 +17,8 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
+    NEXT_PUBLIC_PROTECTED: z.enum(["true", "false"]).transform((v) => v === "true").default("true"),
+    NEXT_PUBLIC_PASSWORD: z.string(),
   },
 
   /**
@@ -25,6 +27,8 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    NEXT_PUBLIC_PROTECTED: process.env.NEXT_PUBLIC_PROTECTED,
+    NEXT_PUBLIC_PASSWORD: process.env.NEXT_PUBLIC_PASSWORD,
     // NEXT_PUBLIC_CLIENTVAR: process.env.NEXT_PUBLIC_CLIENTVAR,
   },
   /**

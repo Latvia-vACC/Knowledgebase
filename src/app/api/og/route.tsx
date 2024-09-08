@@ -21,7 +21,7 @@ export async function GET(req: NextRequest) {
 
   return new ImageResponse(
     (
-      <div tw="flex flex-col h-full w-full justify-between">
+      <div tw="flex flex-col h-full w-full justify-between bg-white">
         <div tw="flex flex-col justify-center pt-6 pl-12">
           {/* @ts-expect-error Incorrect type inference */}
           <img tw="w-1/4" src={logo_light} alt="Latvia vACC" />

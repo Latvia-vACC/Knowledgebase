@@ -1,5 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -58,6 +59,9 @@ const themeConfig = {
     light: 64.4,
     dark: 100
   },
+  head: <>
+    <meta name="theme-color" content="#9d2235" />
+  </>,
   useNextSeoProps() {
     const { asPath } = useRouter();
 
@@ -75,8 +79,8 @@ const themeConfig = {
         openGraph: {
           images: [{
             url: `https://kb.lv-vacc.org/api/og?title=${sanitisedPath.join(" ")}`
-          }]
-        }
+          }],
+        },
       }
     }
 
