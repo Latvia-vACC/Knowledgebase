@@ -9,7 +9,7 @@ Some parts of airspace serve different purposes bases on their limits and proxim
 
 ## ATS Airspace Classification and Structure in EVRR FIR
 
-![ATS Airpsace Classification and Structure in EVRR FIR from the AIS LGS VFR Chart of EVRR FIR (13th edition, FROM 05 SEP 2024)](../../../img/ats_airspace.png)
+![ATS Airspace Classification and Structure in EVRR FIR from the AIS LGS VFR Chart of EVRR FIR (13th edition, FROM 05 SEP 2024)](../../../img/ats_airspace.png)
 
 ## Controlled Airspace
 
@@ -17,7 +17,7 @@ Some parts of airspace serve different purposes bases on their limits and proxim
 
 Control Traffic Zones (CTRs) are a type of airspace that is used around controlled aerodromes. Typically such an airspace extends from the ground (SFC) to a rather low vertical limit (e.g. Riga CTR has vertical limits of `SFC-2500FT`). The lateral limits of a CTR are also not very large: a typical CTR extends approximately 10-15 NM around a given aerodrome. This airspace is staffed by an ATCO with an endorsement to control the Tower (position). A CTR is the first airspace that a departing aircraft crosses once airborne, and the last airspace that an arriving aircraft goes through before touchdown. Such airspaces may be either fully controlled or procedural.
 
-EVRR FIR has 2 CTRs: Riga CTR and Lielvarde CTR. Precise dimensions and additional information on the structure and characteristics of those airspaces is available in the AIP of the Republic of Latvia section `EVGA AD 2.17 AIR TRAFFIC SERVICES AIRSPACE`.
+EVRR FIR has 2 CTRs: Riga CTR and Lielvarde CTR. Precise dimensions and additional information on the structure and characteristics of those airspaces is available in the AIP of the Republic of Latvia.
 
 #### Riga CTR
 
@@ -29,13 +29,32 @@ Lielvarde CTR is a class D airspace that is split into sectors A and B which hav
 
 ### Terminal Maneuvering Area (TMA)
 
-Terminal Maneuvering Areas are another type of airspace directly associated with an aerodrome. Typically this is a portion of airspace specifically allocated for handling separation among aircraft that are continuously climbing/descending, i.e. those that have just departed or are about to arrive. TMAs are often split into sectors that may be staffed by different ATCOs to accommodate for large traffic volumes. Same as a CTR, a TMA may be procedural. An ATCO responsible for a non-procedural TMA or its section holds an Approach Control Surveillance (APS) endorsement, thus an ATC station responsible for a TMA typically holds callsign of "Approach" or "Departure".
+Terminal Maneuvering Areas are another type of airspace directly associated with an aerodrome. Typically this is a portion of airspace specifically allocated for handling separation among aircraft that are continuously climbing/descending, i.e. those that have just departed or are about to arrive. TMAs are often split into sectors that may be staffed by different ATCOs to accommodate for large traffic volumes. Same as a CTR, a TMA may be procedural. An ATCO responsible for a non-procedural TMA or its section holds an Approach Control Surveillance (APS) endorsement, thus the ATC station responsible for a TMA typically holds callsign of "Approach" or "Departure".
 
-EVRR FIR has only 1 TMA - Riga TMA. This TMA is attached to and associated with the RIX Riga Airport. Riga TMA is class C airspace that is atypically large compared to other European TMAs, it spans more than 120 nautical miles. The TMA is split into 3 sectors: A, B, and C with respective vertical limits of `3000FT-FL285`, `1500FT-FL95`, and `3000FT-5500FT`. Riga TMA is staffed by Riga Approach and has 2 staffing configurations: a combined Riga Approach covering sectors A, B, and C on frequency 129.925MHz, or a 2-sector split with sectors A and C being covered by frequency 129.925MHz and sector B being covered by frequency 134.850MHz.
+EVRR FIR has only 1 TMA - Riga TMA. This TMA is attached to and associated with the RIX Riga Airport. Riga TMA is class C airspace that is atypically large compared to other European TMAs, it spans more than 120 nautical miles. The TMA is split into 3 sectors: A, B, and C with respective vertical limits of `3000FT-FL285`, `1500FT-FL95`, and `3000FT-5500FT`. Riga TMA is staffed by Riga Approach and has 2 staffing configurations: a combined Riga Approach covering sectors A, B, and C on frequency 129.925 MHz, or a 2-sector split with sectors A and C being covered by frequency 129.925 MHz and sector B being covered by frequency 134.850 MHz.
 
 ### Control Area (CTA)
 
+Control Area is the broadest definition of controlled airspace. Practically, any airspace that does not serve a specific purpose in relation to a controlled airfield is a CTA. Most airspace that an aircraft passes through on its way from A to B is likely a CTA of some kind. It is common for CTAs to follow the lateral limits of the FIR they belong to and/or be split into sectors or areas of responsibility (AoRs). A CTA is staffed by a controller holding an Area Control Surveillance (ACS) endorsement; the ATC station responsible for a CTA or its section typically holds a callsign of "Control", "Radar", or "Center" (the latter one applies only to North/South America).
+
+Riga CTA is a class C airspace within the lateral limits of Riga FIR. It is staffed by Riga Control and has vertical limits of `FL95-FL660` and is split into 3 AoR:
+
+- Riga AoR - Sector NORTH (Riga Control frequency 135.100 MHz)
+- Riga AoR - Sector SOUTH (Riga Control frequency 134.750 MHz / 135.100 MHz)
+- Riga AoR - Sector EAST (Riga Control frequency 133.200 MHz)
+
+An additional secondary frequency is defined for all AoRs - 134.125 MHz which is often used to combine sectors NORTH and SOUTH into a common sector on the western side of the FIR. As in most European FIRs, the emergency frequency is 121.500 MHz.
+
 ## Uncontrolled Airspace
+
+All airspace outside the limits of controlled airspace is uncontrolled. Such airspace can be of class F or G; with the former being used rather rarely, most uncontrolled airspace in the world is of class G. In this type of airspace radar separation and surveillance are not provided to traffic, thus ATC holds no responsibility for separation of traffic. Within uncontrolled airspace Flight Information Service (FIS) is often provided.
+
+In Riga FIR all uncontrolled airspace is of class G and its limits are defined as everything that is not defined as controlled airspace. This airspace is also split into FIS sectors (primarily for defining separate vertical limits and to ensure appropriate frequency range). The FIS frequencies in EVRR are as follows:
+
+- Riga FIS Sector (Riga Information) - 120.225 MHz
+- Liepaja FIS Sector (Liepaja Information) - 129.400 MHz
+
+Liepaja Information also functions as an Aerodrome Flight Information Service (AFIS) station for the Liepaja airport.
 
 ### Aerodrome Traffic Zone (ATZ)
 
