@@ -39,12 +39,12 @@ const themeConfig = {
   },
   footer: {
     text: 
-    <span>
-      MIT 2006-{new Date().getFullYear()} ©{' '}
-    <Link href="https://lv-vacc.org" target="_blank">
-      Latvia vACC
-    </Link>
-  </span>
+      <span>
+          MIT 2006-{new Date().getFullYear()} ©{' '}
+        <Link href="https://lv-vacc.org" target="_blank">
+          Latvia vACC
+        </Link>
+      </span>
   },
   // banner: {
   //   key: "not-real",
