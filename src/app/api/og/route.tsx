@@ -34,7 +34,9 @@ export async function GET(req: NextRequest) {
         </div>
         <div tw="flex absolute w-full h-[65%]">
           <div tw="flex w-full items-center justify-center">
-            <span tw="text-8xl pb-3 border-b-8 border-[#9d2235]">{title}</span>
+            <span tw="text-8xl text-center pb-3 mx-6 border-b-8 border-[#9d2235]">
+              {title}
+            </span>
           </div>
         </div>
         <svg

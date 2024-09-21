@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -11,7 +10,9 @@ import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
 const Logo = () => {
   const { theme, systemTheme } = useTheme();
 
-  return <Image src={theme === "system" ? systemTheme === 'dark' ? logo_dark : logo_light : theme === "dark" ? logo_dark : logo_light} alt="Latvia vACC" />
+  return (
+    <Image src={theme === "system" ? systemTheme === 'dark' ? logo_dark : logo_light : theme === "dark" ? logo_dark : logo_light} alt="Latvia vACC" width="192" />
+  );
 }
 
 /** @type {import("nextra-theme-docs").DocsThemeConfig} */

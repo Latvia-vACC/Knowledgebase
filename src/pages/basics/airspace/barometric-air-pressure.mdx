@@ -1,0 +1,49 @@
+---
+title: Barometric Air Pressure
+description: The transition layer is a section of airspace with certain vertical limits within a given portion of the airspace relevant to a certain aerodrome. The transition layer allows to avoid conflicts due to misaligned altimeter settings both below and above the transition layer.
+---
+
+# Barometric Air Pressure
+
+Most modern aircraft measure their altitude in feet (ft) above mean sea level (AMSL). These measurements are performed using a barometric altimeter - basically an air pressure sensor. Unfortunately for everyone who loves isometric systems, air is not one of them and consequently temperature and pressure are not static either. Therefore, depending on current weather conditions, a barometric altimeter will show different altitude readings than it did, for instance, the day before. To counter this the altimeter setting has to be adjusted to match the current air pressure in hectopascals (hPa) when flying in most countries, or in inches of mercury (inHg) when flying in the US, Canada, and some other close countries.
+
+## Barometric Air Pressure Settings
+
+There are 3 types of settings that can be used in an altimeter:
+
+- QNH (commonly referred to as local air pressure) – the setting used to align the altimeter reading with altitude in feet AMSL
+- QFE – the setting used to align the altimeter reading with altitude in feet AGL. It is used rather rarely and in very limited circumstances (mostly for VFR traffic in a limited number of countries). QFE value for RIX Riga Airport is `QNH - 1`
+- QNE – the setting equal to the standard barometric air pressure value, 1013 hPa or 29.92 inHg
+
+Technically QNH, QFE and QNE are the names for the altimeter readings under a given barometric air pressure setting, however it is common to refer to the altimeter setting itself using these abbreviations.
+
+## Transition Layer
+
+The transition layer is a section of airspace with certain vertical limits within a given portion of the airspace relevant to a certain aerodrome. The transition layer allows to avoid conflicts due to misaligned altimeter settings both below and above the transition layer.
+
+When flying at low altitudes or while taxiing on the ground, aircraft use QNH for their altimeter readings to match. When an aircraft climb above a certain altitude it becomes impractical to change their altimeter settings all the time. At high altitudes aircraft speeds are also high and thus the altimeter setting would have to be changed every few minutes. To account for this inconvenience while maintaining equal altimeter readings for all aircraft in the vicinity of one another the transition layer has been invented.
+
+A transition layer is a piece of airspace with no defined lateral limits. Its lower vertical boundary is the transition altitude and its upper vertical boundary is the transition level.
+
+### Transition Altitude (TA)
+
+The transition altitude (TA) is the lower vertical boundary of a transition layer; it is measured in feet AMSL. The TA is unique for each aerodrome, although many countries choose to adapt a single TA for all its aerodromes. Any aircraft not intending to climb over the TA shall use QNH as their altimeter setting. Any aircraft climbing through the TA shall change their altimeter setting to 1013 hPA (or 29.92 inHg) as this value is considered the standard air pressure.
+
+**The transition altitude in Riga FIR is 5000ft.**
+
+### Transition Level (TL)
+
+The transition level (TL) is the upper vertical boundary of a transition layer; it is defined as a flight level (FL) with 500ft increments. The TL is unique for each aerodrome depending on its QNH; most countries define a single table of TLs depending on QNH for all its aerodromes. Any aircraft above the transition level shall use 1013 hPA (or 29.92 inHg) as their altimeter setting. Any aircraft descending through the TL shall change their altimeter setting to that of QNH for the relevant aerodrome.
+
+The transition layer table for Riga FIR is as follows:
+
+| Air Pressure (QNH) | Transition Level (TL) |
+| :----------------: | :-------------------: |
+|     901 - 942      |          85           |
+|     943 - 959      |          80           |
+|     960 - 977      |          75           |
+|     978 - 995      |          70           |
+|     996 - 1013     |          65           |
+|    1014 - 1031     |          60           |
+|    1032 - 1050     |          55           |
+|        1051        |          50           |
