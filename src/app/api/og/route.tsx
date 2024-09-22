@@ -11,9 +11,13 @@ export async function GET(req: NextRequest) {
     ? searchParams.get("includeTagline") === "1"
     : true;
 
+  const tagline = searchParams.has("customTagline")
+    ? searchParams.get("customTagline")
+    : "Knowledgebase";
+
   const title = searchParams.has("title")
     ? searchParams.get("title")
-    : ("Aviate Educate Communicate" as string);
+    : "Aviate Educate Communicate";
 
   const logo_light = await fetch(
     new URL("../../../img/vACCLogo_en.png", import.meta.url),
@@ -31,10 +35,10 @@ export async function GET(req: NextRequest) {
           <img tw="w-1/4" src={logo_light} alt="Latvia vACC" />
           {includeTagline && (
             <span
-              tw="text-[#9d2235] text-2xl -mt-10 -ml-0.5"
+              tw="-ml-0.5 -mt-10 max-w-[245px] text-2xl leading-none text-[#9d2235]"
               style={{ fontFamily: "OpenSans" }}
             >
-              Knowledgebase
+              {tagline}
             </span>
           )}
         </div>
