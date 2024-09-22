@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "nextra-theme-docs";
-import { useMounted } from "nextra/hooks";
 import logo_light from "~/svg/vACCLogo_en.svg";
 import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
 
@@ -81,32 +80,54 @@ const themeConfig = {
   ),
   useNextSeoProps() {
     const { asPath } = useRouter();
-    const mounted = useMounted();
 
-    if (asPath !== "/") {
+    const basePath = asPath.split("/");
+    basePath.pop();
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    import(`./src/pages${basePath.join("/")}/_meta.json`).then((obj) => {
+      // @ts-expect-error Ignore
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      console.log(obj[asPath.split("/").at(-1)]);
+
+      if (asPath !== "/") {
+        // ts-expect-error This will not be undefined
+        // const sanitisedPath = asPath
+        //   .split("/")
+        //   .at(-1)
+        //   .replaceAll("-", " ")
+        //   .split(" ");
+        // for (let i = 0; i < sanitisedPath.length; i++) {
+        //   sanitisedPath[i] =
+        //     // @ts-expect-error This will not be undefined
+        //     sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1);
+        // }
+
+        return {
+          themeColor: "#9d2235",
+          titleTemplate: "%s – Latvia vACC Knowledgebase",
+          openGraph: {
+            images: [
+              {
+                // @ts-expect-error Ignore
+                // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+                url: `https://kb.lv-vacc.org/api/og?title=${obj[asPath.split("/").at(-1)]}`,
+              },
+            ],
+          },
+        };
+      }
+
       return {
         themeColor: "#9d2235",
-        titleTemplate: "%s – Latvia vACC Knowledgebase",
         openGraph: {
           images: [
             {
-              url: `https://kb.lv-vacc.org/api/og?title=${mounted ? document.title.replace(" – Latvia vACC Knowledgebase", "") : ""}`,
+              url: "https://kb.lv-vacc.org/api/og?title=Welcome to Latvia vACC!",
             },
           ],
         },
       };
-    }
-
-    return {
-      themeColor: "#9d2235",
-      openGraph: {
-        images: [
-          {
-            url: "https://kb.lv-vacc.org/api/og?title=Welcome to Latvia vACC!",
-          },
-        ],
-      },
-    };
+    });
   },
 };
 
