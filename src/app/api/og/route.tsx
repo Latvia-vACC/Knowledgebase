@@ -35,7 +35,7 @@ export async function GET(req: NextRequest) {
           <img tw="w-1/4" src={logo_light} alt="Latvia vACC" />
           {includeTagline && (
             <span
-              tw="-ml-0.5 -mt-10 max-w-[245px] text-2xl leading-none text-[#9d2235]"
+              tw="-ml-0.5 -mt-9 max-w-[245px] text-2xl leading-none text-[#9d2235]"
               style={{ fontFamily: "OpenSans" }}
             >
               {tagline}
@@ -44,7 +44,9 @@ export async function GET(req: NextRequest) {
         </div>
         <div tw="flex absolute w-full h-[65%]">
           <div tw="flex w-full items-center justify-center">
-            <span tw="text-8xl text-center pb-3 mx-6 border-b-8 border-[#9d2235]">
+            <span
+              tw={`text-${title!.length <= 35 ? 8 : title!.length <= 70 ? 7 : 6}xl text-center pb-3 mx-6 border-b-8 border-[#9d2235]`}
+            >
               {title}
             </span>
           </div>
