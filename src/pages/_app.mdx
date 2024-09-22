@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
       setShow(true);
   }, []);
 
-  if (show)
+  if (show) {
     return (
       <div className={GeistSans.className}>
         <Component {...pageProps} />
@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }) {
         </noscript>
       </div>
     );
+  }
 
   return (
     <div
