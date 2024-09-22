@@ -80,6 +80,7 @@ const themeConfig = {
   ),
   useNextSeoProps() {
     const { asPath } = useRouter();
+    const exceptions = ["a", "an", "and", "the", "in", "out", "of"];
 
     if (asPath !== "/") {
       // @ts-expect-error This will not be undefined
@@ -89,9 +90,10 @@ const themeConfig = {
         .replaceAll("-", " ")
         .split(" ");
       for (let i = 0; i < sanitisedPath.length; i++) {
-        sanitisedPath[i] =
-          // @ts-expect-error This will not be undefined
-          sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1);
+        if (!exceptions.some((w) => w === sanitisedPath[i]))
+          sanitisedPath[i] =
+            // @ts-expect-error This will not be undefined
+            sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1);
       }
 
       return {
