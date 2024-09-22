@@ -7,6 +7,10 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
 
+  const includeTagline = searchParams.has("includeTagline")
+    ? searchParams.get("includeTagline") === "1"
+    : true;
+
   const title = searchParams.has("title")
     ? searchParams.get("title")
     : ("Aviate Educate Communicate" as string);
@@ -25,12 +29,14 @@ export async function GET(req: NextRequest) {
         <div tw="flex flex-col justify-center pt-6 pl-12">
           {/* @ts-expect-error Incorrect type inference */}
           <img tw="w-1/4" src={logo_light} alt="Latvia vACC" />
-          <span
-            tw="text-[#9d2235] text-2xl -mt-10 -ml-0.5"
-            style={{ fontFamily: "OpenSans" }}
-          >
-            Knowledgebase
-          </span>
+          {includeTagline && (
+            <span
+              tw="text-[#9d2235] text-2xl -mt-10 -ml-0.5"
+              style={{ fontFamily: "OpenSans" }}
+            >
+              Knowledgebase
+            </span>
+          )}
         </div>
         <div tw="flex absolute w-full h-[65%]">
           <div tw="flex w-full items-center justify-center">
