@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useTheme } from "nextra-theme-docs";
-import logo_light from "~/svg/vACCLogo_en.svg";
-import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
+import logo_light from "~/img/vACCLogo_en_tagline.png";
+import logo_dark from "~/img/vACCLogo_en_tagline_white_text.png";
 
 const Logo = () => {
   const { theme, systemTheme } = useTheme();
