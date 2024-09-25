@@ -7,6 +7,10 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
 
+  const logoOnly = searchParams.has("logoOnly")
+    ? searchParams.get("logoOnly") === "1"
+    : true;
+
   const includeTagline = searchParams.has("includeTagline")
     ? searchParams.get("includeTagline") === "1"
     : true;
@@ -27,27 +31,44 @@ export async function GET(req: NextRequest) {
     new URL("../../../assets/OpenSans-Bold.ttf", import.meta.url),
   ).then((res) => res.arrayBuffer());
 
+  const Logo = () => (
+    <div
+      tw={
+        logoOnly
+          ? "flex flex-col justify-center pt-28 pl-12 mx-auto"
+          : "flex flex-col justify-center pt-6 pl-12"
+      }
+    >
+      <img
+        tw={logoOnly ? "w-1/2" : "w-1/4"}
+        src={logo_light as unknown as string}
+        alt="Latvia vACC"
+      />
+      {includeTagline && (
+        <span
+          tw={
+            logoOnly
+              ? "-ml-0.5 -mt-[4.5rem] max-w-[300px] text-5xl leading-none text-[#9d2235]"
+              : "-ml-0.5 -mt-9 max-w-[245px] text-2xl leading-none text-[#9d2235]"
+          }
+          style={{ fontFamily: "OpenSans" }}
+        >
+          {tagline}
+        </span>
+      )}
+    </div>
+  );
+
   return new ImageResponse(
     (
       <div tw="flex flex-col h-full w-full justify-between bg-white">
-        <div tw="flex flex-col justify-center pt-6 pl-12">
-          {/* @ts-expect-error Incorrect type inference */}
-          <img tw="w-1/4" src={logo_light} alt="Latvia vACC" />
-          {includeTagline && (
-            <span
-              tw="-ml-0.5 -mt-9 max-w-[245px] text-2xl leading-none text-[#9d2235]"
-              style={{ fontFamily: "OpenSans" }}
-            >
-              {tagline}
-            </span>
-          )}
-        </div>
+        <Logo />
         <div tw="flex absolute w-full h-[65%]">
           <div tw="flex w-full items-center justify-center">
             <span
               tw={`text-${title!.length <= 35 ? 8 : title!.length <= 70 ? 7 : 6}xl text-center pb-3 mx-6 border-b-8 border-[#9d2235]`}
             >
-              {title}
+              {!logoOnly ? title : ""}
             </span>
           </div>
         </div>
