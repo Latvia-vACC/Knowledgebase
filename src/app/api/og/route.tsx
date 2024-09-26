@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
 
   const logoOnly = searchParams.has("logoOnly")
     ? searchParams.get("logoOnly") === "1"
-    : true;
+    : false;
 
   const includeTagline = searchParams.has("includeTagline")
     ? searchParams.get("includeTagline") === "1"
@@ -48,7 +48,7 @@ export async function GET(req: NextRequest) {
         <span
           tw={
             logoOnly
-              ? "-ml-0.5 -mt-[4.5rem] max-w-[300px] text-5xl leading-none text-[#9d2235]"
+              ? "-ml-0.5 -mt-[4.5rem] max-w-[400px] text-5xl leading-none text-[#9d2235]"
               : "-ml-0.5 -mt-9 max-w-[245px] text-2xl leading-none text-[#9d2235]"
           }
           style={{ fontFamily: "OpenSans" }}
