@@ -37,8 +37,12 @@ export async function GET(req: NextRequest) {
     ? searchParams.get("title")
     : "Aviate Educate Communicate";
 
-  const logo_light = await fetch(
-    new URL(`../../../img/vACCLogo_${lang.toLowerCase()}.png`, import.meta.url),
+  const logo_en = await fetch(
+    new URL(`../../../img/vACCLogo_en.png`, import.meta.url),
+  ).then((res) => res.arrayBuffer());
+
+  const logo_lv = await fetch(
+    new URL(`../../../img/vACCLogo_lv.png`, import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   const fontData = await fetch(
@@ -55,7 +59,11 @@ export async function GET(req: NextRequest) {
     >
       <img
         tw={logoOnly ? "w-1/2" : "w-1/4"}
-        src={logo_light as unknown as string}
+        src={
+          lang.toLowerCase() === "en"
+            ? (logo_en as unknown as string)
+            : (logo_lv as unknown as string)
+        }
         alt="Latvia vACC"
       />
       {includeTagline && (
