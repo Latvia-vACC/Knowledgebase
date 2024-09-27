@@ -1,11 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/og";
-import { type NextRequest } from "next/server";
+import { NextResponse, type NextRequest } from "next/server";
 
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
+
+  const lang = searchParams.has("lang") ? searchParams.get("lang") : "en";
+
+  if (lang?.toLowerCase() !== "en" && lang?.toLowerCase() !== "lv")
+    return NextResponse.json(
+      {
+        message:
+          "Parameter 'lang' has an invalid value. Only values 'en' or 'lv' are valid.",
+      },
+      {
+        status: 400,
+        statusText: "Bad Request",
+      },
+    );
 
   const logoOnly = searchParams.has("logoOnly")
     ? searchParams.get("logoOnly") === "1"
@@ -24,7 +38,7 @@ export async function GET(req: NextRequest) {
     : "Aviate Educate Communicate";
 
   const logo_light = await fetch(
-    new URL("../../../img/vACCLogo_en.png", import.meta.url),
+    new URL(`../../../img/vACCLogo_${lang.toLowerCase()}.png`, import.meta.url),
   ).then((res) => res.arrayBuffer());
 
   const fontData = await fetch(
