@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import { GeistSans } from "geist/font/sans";
 import { env } from "~/env";
 import logo_light from "~/svg/vACCLogo_en.svg";
+import "~/styles/globals.css";
 
 export const OpenSans = Open_Sans({ subsets: ["latin-ext"] });
 
+// @ts-expect-error Ignore types, it's a js file
 export default function App({ Component, pageProps }) {
   const [show, setShow] = useState(!env.NEXT_PUBLIC_PROTECTED);
 

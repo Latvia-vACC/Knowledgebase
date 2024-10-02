@@ -25,6 +25,7 @@ const Logo = () => {
       }
       alt="Latvia vACC"
       width="192"
+      className="min-w-[192px]"
     />
   );
 };
@@ -40,7 +41,7 @@ const themeConfig = {
     link: "https://discord.gg/rr5dpuh",
   },
   search: {
-    placeholder: "Search knowledgebase...",
+    placeholder: "Search...",
   },
   feedback: {
     content: "Any feedback? Click here! →",
@@ -64,7 +65,13 @@ const themeConfig = {
   },
   // banner: {
   //   key: "not-real",
-  //   content: <span className="whitespace-normal overflow-visible text-wrap">❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗</span>
+  //   content: (
+  //     <span className="h-fit overflow-visible whitespace-normal text-wrap">
+  //       ❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources,
+  //       materials, or information provided by Latvia vACC should be used for
+  //       real world aviation! ❗
+  //     </span>
+  //   ),
   // },
   logo: Logo,
   color: {
@@ -80,47 +87,13 @@ const themeConfig = {
   head() {
     const { frontMatter } = useConfig();
     const { asPath } = useRouter();
-    const exceptions = ["a", "an", "and", "the", "in", "out", "of"];
-
-    if (asPath !== "/") {
-      // @ts-expect-error This will not be undefined
-      const sanitisedPath = asPath
-        .split("/")
-        .at(-1)
-        .replaceAll("-", " ")
-        .split(" ");
-      for (let i = 0; i < sanitisedPath.length; i++) {
-        if (!exceptions.some((w) => w === sanitisedPath[i]))
-          sanitisedPath[i] =
-            // @ts-expect-error This will not be undefined
-            sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1);
-      }
-
-      // return {
-      //   themeColor: "#9d2235",
-      //   titleTemplate: "%s – Latvia vACC Knowledgebase",
-      //   openGraph: {
-      //     images: [
-      //       {
-      //         url: `https://kb.lv-vacc.org/api/og?title=${sanitisedPath.join(" ")}`,
-      //       },
-      //     ],
-      //   },
-      // };
-    }
-
-    // return {
-    //   themeColor: "#9d2235",
-    //   openGraph: {
-    //     images: [
-    //       {
-    //         url: "https://kb.lv-vacc.org/api/og?title=Welcome to Latvia vACC!",
-    //       },
-    //     ],
-    //   },
-    // };
 
     const url = `https://kb.lv-vacc.org${asPath}`;
+
+    if (!frontMatter.title || !frontMatter.description)
+      throw new Error(
+        "MDX frontmatter must have at least 'title' and 'description' defined!",
+      );
 
     return (
       <>

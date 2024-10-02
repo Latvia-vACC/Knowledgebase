@@ -14,7 +14,7 @@ const contents = {
     href: "/basics",
     type: "page",
   },
-  software: {
+  "software-guides": {
     title: "Software Guides",
     href: "/software-guides",
     type: "page",
@@ -25,27 +25,27 @@ const contents = {
     items: [
       {
         title: "GMC",
-        href: "/SOP/GMC",
+        href: "/sop/gmc",
       },
       {
         title: "TWR",
-        href: "/SOP/TWR",
+        href: "/sop/twr",
       },
       {
         title: "APS",
-        href: "/SOP/APS",
+        href: "/sop/aps",
       },
       {
         title: "ACS",
-        href: "/SOP/ACS",
+        href: "/sop/acs",
       },
       {
         title: "AFIS/FIS",
-        href: "/SOP/AFIS-&-FIS",
+        href: "/sop/fis",
       },
     ],
   },
-  external: {
+  "external-resources": {
     title: "External Resources",
     href: "/external-resources",
     type: "page",
