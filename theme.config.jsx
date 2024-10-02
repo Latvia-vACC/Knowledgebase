@@ -25,7 +25,6 @@ const Logo = () => {
       }
       alt="Latvia vACC"
       width="192"
-      className="min-w-[192px]"
     />
   );
 };
