@@ -23,6 +23,12 @@ const withNextra = nextra({
 /** @type {import("next").NextConfig} */
 const config = {
   transpilePackages: ["geist"],
+  rewrites: async () => [
+    {
+      source: "/index",
+      destination: "/404"
+    }
+  ]
   // i18n: {
   //   defaultLocale: "en",
   //   locales: ["en", "lv"]
