@@ -3,28 +3,33 @@ title: Latvia vACC Knowledgebase
 description: Welcome to the Latvia vACC Knowledgebase! All relevant documentation, SOPs and training material is available here!
 ---
 
-import { Cards, Card } from "nextra/components";
+import { Cards } from "nextra/components";
 
 # Latvia vACC Knowledgebase
 
 This collection of resources is a guide and source of theoretical knowledge (basically a Wiki) for Air Traffic Control students of Latvia vACC on the VATSIM Network as well as anyone else curious or interested in expanding their knowledge about the work that happens behind the scopes in EVRR FIR. If you are here for the first time, just click one of the cards below to find out more about topics that interest you!
 
 <Cards num={2}>
-  <Card title="Basics" icon="" href="/basics" image arrow>
+  <Cards.Card title="Basics" icon="" href="/basics" arrow>
     ![AirBaltic Airbus A220](~/img/airbaltic.jpg)
-  </Card>
-  <Card title="Software Guides" icon="" href="/software" image arrow>
+  </Cards.Card>
+  <Cards.Card title="Software Guides" icon="" href="/software-guides" arrow>
     ![EuroScope](~/img/euroscope.png)
-  </Card>
+  </Cards.Card>
 </Cards>
 
 <Cards num={2}>
-  <Card title="SOPs" icon="" href="/sop" image arrow>
+  <Cards.Card title="SOPs" icon="" href="/SOP" arrow>
     ![EuroScope GMC view](~/img/gmc.png)
-  </Card>
-  <Card title="External Resources" icon="" href="/external" image arrow>
+  </Cards.Card>
+  <Cards.Card
+    title="External Resources"
+    icon=""
+    href="/external-resources"
+    arrow
+  >
     ![CAA and LGS logos](~/img/external.png)
-  </Card>
+  </Cards.Card>
 </Cards>
 
 Latvia vACC Knowledgebase is maintained jointly by the Training Department and the Technical Department of the vACC.

@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useTheme } from "nextra-theme-docs";
+import { useConfig, useTheme } from "nextra-theme-docs";
 import logo_light from "~/svg/vACCLogo_en.svg";
 import logo_dark from "~/svg/vACCLogo_en_white_text.svg";
 
@@ -44,14 +46,14 @@ const themeConfig = {
     content: "Any feedback? Click here! →",
   },
   editLink: {
-    text: "Edit this page on GitHub →",
+    content: "Edit this page on GitHub →",
   },
   toc: {
     backToTop: true,
     title: "Table of Contents",
   },
   footer: {
-    text: (
+    content: (
       <span>
         MIT 2006-{new Date().getFullYear()} ©{" "}
         <Link href="https://lv-vacc.org" target="_blank">
@@ -62,23 +64,21 @@ const themeConfig = {
   },
   // banner: {
   //   key: "not-real",
-  //   text: <span className="whitespace-normal overflow-visible text-wrap">❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗</span>
+  //   content: <span className="whitespace-normal overflow-visible text-wrap">❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources, materials, or information provided by Latvia vACC should be used for real world aviation! ❗</span>
   // },
   logo: Logo,
-  primaryHue: {
-    light: 350.73,
-    dark: 342,
+  color: {
+    hue: {
+      light: 350.73,
+      dark: 342,
+    },
+    saturation: {
+      light: 64.4,
+      dark: 100,
+    },
   },
-  primarySaturation: {
-    light: 64.4,
-    dark: 100,
-  },
-  head: (
-    <>
-      <meta name="theme-color" content="#9d2235" />
-    </>
-  ),
-  useNextSeoProps() {
+  head() {
+    const { frontMatter } = useConfig();
     const { asPath } = useRouter();
     const exceptions = ["a", "an", "and", "the", "in", "out", "of"];
 
@@ -96,29 +96,49 @@ const themeConfig = {
             sanitisedPath[i].at(0).toUpperCase() + sanitisedPath[i].slice(1);
       }
 
-      return {
-        themeColor: "#9d2235",
-        titleTemplate: "%s – Latvia vACC Knowledgebase",
-        openGraph: {
-          images: [
-            {
-              url: `https://kb.lv-vacc.org/api/og?title=${sanitisedPath.join(" ")}`,
-            },
-          ],
-        },
-      };
+      // return {
+      //   themeColor: "#9d2235",
+      //   titleTemplate: "%s – Latvia vACC Knowledgebase",
+      //   openGraph: {
+      //     images: [
+      //       {
+      //         url: `https://kb.lv-vacc.org/api/og?title=${sanitisedPath.join(" ")}`,
+      //       },
+      //     ],
+      //   },
+      // };
     }
 
-    return {
-      themeColor: "#9d2235",
-      openGraph: {
-        images: [
-          {
-            url: "https://kb.lv-vacc.org/api/og?title=Welcome to Latvia vACC!",
-          },
-        ],
-      },
-    };
+    // return {
+    //   themeColor: "#9d2235",
+    //   openGraph: {
+    //     images: [
+    //       {
+    //         url: "https://kb.lv-vacc.org/api/og?title=Welcome to Latvia vACC!",
+    //       },
+    //     ],
+    //   },
+    // };
+
+    const url = `https://kb.lv-vacc.org${asPath}`;
+
+    return (
+      <>
+        <title>
+          {asPath === "/"
+            ? frontMatter.title
+            : `${frontMatter.title} - Latvia vACC Knowledgebase`}
+        </title>
+        <meta name="theme-color" content="#9d2235" />
+        <meta property="og:url" content={url} />
+        <meta
+          property="og:image"
+          content={`https://kb.lv-vacc.org/api/og?title=${asPath === "/" ? "" : frontMatter.title}&logoOnly=${asPath === "/" ? 1 : 0}`}
+        />
+        <meta property="og:title" content={frontMatter.title} />
+        <meta property="og:description" content={frontMatter.description} />
+      </>
+    );
   },
 };
 
