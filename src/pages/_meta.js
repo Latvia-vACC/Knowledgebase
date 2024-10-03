@@ -15,7 +15,7 @@ const contents = {
     type: "page",
   },
   "software-guides": {
-    title: "Software Guides",
+    title: "Software",
     href: "/software-guides",
     type: "page",
   },
@@ -46,7 +46,7 @@ const contents = {
     ],
   },
   "external-resources": {
-    title: "External Resources",
+    title: "External",
     href: "/external-resources",
     type: "page",
   },
