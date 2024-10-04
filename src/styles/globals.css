@@ -7,3 +7,8 @@
     max-width: 128px;
   }
 }
+
+::selection {
+  background-color: hsl(350.73deg 64.4% 37%);
+  color: white;
+}

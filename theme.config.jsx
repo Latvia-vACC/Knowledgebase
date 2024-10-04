@@ -80,7 +80,7 @@ const themeConfig = {
     },
     saturation: {
       light: 64.4,
-      dark: 100,
+      dark: 64.4,
     },
   },
   head() {
