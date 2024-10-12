@@ -56,10 +56,11 @@ const themeConfig = {
   footer: {
     content: (
       <span>
-        Apache Licence 2.0 2006-{new Date().getFullYear()} ©{" "}
+        Apache License 2.0 ©{" "}
         <Link href="https://lv-vacc.org" target="_blank">
           Latvia vACC
-        </Link>
+        </Link>{" "}
+        2006-{new Date().getFullYear()}
       </span>
     ),
   },
