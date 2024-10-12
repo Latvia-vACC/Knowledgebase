@@ -3,13 +3,90 @@ title: EuroScope Guide
 description: This page provides a detailed guide on installing EuroScope and EVRR FIR sector file, as well as operating their basic functions.
 ---
 
+import { Steps, Callout } from "nextra/components";
+import { ArrowDownToLineIcon, ExternalLinkIcon } from "lucide-react";
+import themeConfig from "theme.config";
+
 # EuroScope Guide
+
+EuroScope is an ATC client that has been in active use on VATSIM since 2006. It is one of the most advanced tools currently available for virtual air traffic controlling, so much so that it has even found use in training real-life ATC trainees in some countries.
+
+Latvia vACC uses exclusively EuroScope for controlling within EVRR FIR.
 
 ## Installation of EuroScope and EVRR FIR Sector File
 
+The specific setup that is used for controlling in EVRR FIR comes in 2 parts: EuroScope itself and the EVRR FIR sector file. From here on EuroScope will often be referred to as <abbr title="EuroScope">ES</abbr>.
+
 ### EuroScope
 
+<Steps>
+
+<h4>Download EuroScope</h4>
+
+It is recommended that you use <u>EuroScope v3.2.3.2</u> for greatest compatibility with plugins and other parts that interface with ES. You can download the installer for the aforementioned ES version by clicking the button below.
+
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ArrowDownToLineIcon size={18}/>Download EuroScope</button>](https://euroscope.hu/install/EuroScopeSetup.3.2.3.2.msi)
+
+Additional information about ES and version history is available at [euroscope.hu](https://euroscope.hu).
+
+<h4>Use the installation wizard</h4>
+
+The wizard is really simple: just press "next"/"install" until the installation is completed!
+
+</Steps>
+
+<Callout type="error" emoji="⚠️">
+  Please, remember, write down, or know how to find later the file system path
+  where you have installed EuroScope. Knowing this path will aid in installing
+  updates and solving some edge-case problems that you might encounter in the
+  future while using ES.
+</Callout>
+
+<Callout>
+  It is recommended not to open ES straight away after completing the
+  installation process. Doing this will lead to the sector file for Hungary that
+  is included by default. It is not used by Latvia vACC.
+</Callout>
+
+If you would like to take a deeper dive into ES and its features that are beyond this guide, please refer to [EuroScope Documentation](https://www.euroscope.hu/wp/quick-start/).
+
 ### EVRR FIR Sector File
+
+<Steps>
+
+<h4>Download the sector file</h4>
+
+You can always find the latest version of the sector file on **AeroNav GNG**, the common platform for many sector files on VATSIM.
+
+**Remember, it is your responsibility to always use an up-to-date version of the sector file.** Whenever updates are released for the EVRR FIR sector file, appropriate announcements are made on Aeronav GNG, on the [vACC Discord server](https://discord.gg/rr5dpuh), and on other official vACC mediums.
+
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ExternalLinkIcon size={18}/>Download EVRR FIR Sector File</button>](https://www.files.aero-nav.com/EVRR)
+
+<Callout>
+  If you are downloading the sector file for the first time or installing it on
+  a new system, download **`Sector_Package_Final`**. To update an existing
+  installed instance of the sector file, download **`Sector_Package_Update`**.
+</Callout>
+
+<h4>Extract the contents of the archive</h4>
+
+This can be done anywhere on your PC, but you should **remember or write down the path where you extracted the sector file**, since you will need it to launch ES itself, update and customise plugins and settings, and many other things.
+
+<h4>Launch EuroScope</h4>
+
+Launch ES directly by running the executable from the folder where you installed it or by using the desktop shortcut that the installation wizard has most likely generated for you. You will be greeted with the ES launch banner and a file-selection dialog; find the path where you previously extracted the sector file and select `EVRR.prf`.
+
+![EuroScope profile selection dialog. EVRR.prf is selected](../../img/ES_profile_select.png)
+
+</Steps>
+
+### Starting Tips
+
+Here are a few tips for your first steps in EuroScope:
+
+- Try cycling through different views, there are separate views for <abbr title="Ground Movement Control">GMC</abbr>, <abbr title="Tower Control">TWR</abbr>, and radar control. They can be accessed by pressing <kbd>`F1`</kbd> and then numbers `1` through `3`.
+- Try looking through settings and various lists that ES has to offer to understand everything better. You are free to ask questions to training staff if you are feeling lost or cannot figure something out.
+- Furthermore, you are free to experiment, however, <span className="animate-pulse text-latvia-carmine">**remember to back-up the sector file before making any changes**</span> as most modifications to the sector file can render it unrealistic or incomplete in features that are needed for controlling.
 
 ## Basic Usage Guide
 

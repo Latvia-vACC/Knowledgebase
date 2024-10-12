@@ -12,3 +12,11 @@
   background-color: hsl(350.73deg 64.4% 37%);
   color: white;
 }
+
+._underline:has(> .remove-parent-underline) {
+  @apply no-underline;
+}
+
+.underline:has(> .remove-parent-underline) {
+  @apply no-underline;
+}
