@@ -1,5 +1,5 @@
 ---
-title: EuroScope Guide
+title: EuroScope Basics Guide
 description: This page provides a detailed guide on installing EuroScope and EVRR FIR sector file, as well as operating their basic functions.
 ---
 
@@ -7,7 +7,7 @@ import { Steps, Callout } from "nextra/components";
 import { ArrowDownToLineIcon, ExternalLinkIcon } from "lucide-react";
 import themeConfig from "theme.config";
 
-# EuroScope Guide
+# EuroScope Basics Guide
 
 EuroScope is an ATC client that has been in active use on VATSIM since 2006. It is one of the most advanced tools currently available for virtual air traffic controlling, so much so that it has even found use in training real-life ATC trainees in some countries.
 
@@ -76,7 +76,7 @@ This can be done anywhere on your PC, but you should **remember or write down th
 
 Launch ES directly by running the executable from the folder where you installed it or by using the desktop shortcut that the installation wizard has most likely generated for you. You will be greeted with the ES launch banner and a file-selection dialog; find the path where you previously extracted the sector file and select `EVRR.prf`.
 
-![EuroScope profile selection dialog. EVRR.prf is selected](../../img/ES_profile_select.png)
+![EuroScope profile selection dialog. EVRR.prf is selected](../../../img/ES_profile_select.png)
 
 </Steps>
 
@@ -98,7 +98,7 @@ According to the [VATSIM Code of Conduct section A2(a)](https://vats.im/coc#a-ge
 
 When you launch ES for the first time you might see something like the image below. If something is different in your case, do not worry, there is a possibility that you have a different view open (see [Starting Tips](#starting-tips)) or have some settings or plugins set up differently by default. As long as the things you are seeing do not look completely broken and you are not getting any warnings, everything should be fine.
 
-![EVRR FIR sector file, GMC view](../../img/ES_default_view.png)
+![EVRR FIR sector file, GMC view](../../../img/ES_default_view.png)
 
 If is recommended that you open the <abbr title="Ground Movement Control">GMC</abbr> view for an optimal observing experience if you are a new ATC trainee. This can be done by pressing <kbd>`F1`</kbd> and <kbd>`3`</kbd> in sequence.
 
@@ -108,11 +108,11 @@ Now it is easy to start observing by following these simple steps:
 
 <h4>Click "CONNECT" on the green ribbon on the top of your screen</h4>
 
-![ES top green ribbon with the "CONNECT" button highlighted](../../img/ES_top_ribbon_connect.png)
+![ES top green ribbon with the "CONNECT" button highlighted](../../../img/ES_top_ribbon_connect.png)
 
 <h4>Fill out your details in the dialog window that popped-up</h4>
 
-![ES connection dialog window](../../img/ES_connect.png)
+![ES connection dialog window](../../../img/ES_connect.png)
 
 Make sure to follow the following rules when making an observer connection to VATSIM:
 
@@ -129,17 +129,17 @@ Make sure to follow the following rules when making an observer connection to VA
 
 Note: there will be a pop-up asking for you to fill out your expected logoff time. You may ignore it and proceed without entering any value in that field.
 
-**Congratulations!** You are now online as an observer on VATSIM! Now you can view and follow ATC operations in EVRR FIR. The only thing left is to select the frequencies that you wish to listen to. Text frequencies can be selected from within ES and the next step covers their selection, though voice frequencies require additional software known as Audio for VATSIM or AFV. A detailed guide on using the 2 most popular AFV clients is available on [the next page of the knowledgebase](./afv).
+**Congratulations!** You are now online as an observer on VATSIM! Now you can view and follow ATC operations in EVRR FIR. The only thing left is to select the frequencies that you wish to listen to. Text frequencies can be selected from within ES and the next step covers their selection, though voice frequencies require additional software known as Audio for VATSIM or AFV. A detailed guide on using the 2 most popular AFV clients is available on [the relevant page of the knowledgebase](../afv).
 
 <h4>Select text frequencies that you would like to follow</h4>
 
 Click the "headphones" button on the ES top green ribbon.
 
-![ES top green ribbon with the "headphones" button highlighted](../../img/ES_top_ribbon_headphones.png)
+![ES top green ribbon with the "headphones" button highlighted](../../../img/ES_top_ribbon_headphones.png)
 
 The following dialog window should pop-up:
 
-![ES "voice communication setup" window with EVRA_GND highlighted](../../img/ES_comms_setup.png)
+![ES "voice communication setup" window with EVRA_GND highlighted](../../../img/ES_comms_setup.png)
 
 Click the `RCV TXT` checkbox next to the frequencies you would like to follow. Voila!
 
@@ -162,7 +162,7 @@ The following commands might be most useful to you as an aspiring ATCO on VATSIM
 
 <span id="only-active-atco">
   <span className="text-red-500">\*</span> This command shall only be used by
-  non-observer members (i.e. pilots or ATCOs). In case of the wallop command the
-  former applies unless the issue directly affects the observer's experience on
-  the network.
+  non-observer members (i.e. pilots and ATCOs). In case of the wallop command
+  the former applies unless the issue directly affects the observer's experience
+  on the network.
 </span>
