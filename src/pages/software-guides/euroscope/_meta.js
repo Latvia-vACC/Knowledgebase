@@ -1,6 +1,6 @@
 const contents = {
   basics: "Basics",
-  advanced: "Advanced",
+  extended: "Extended",
   plugins: "Plugins",
 };
 
