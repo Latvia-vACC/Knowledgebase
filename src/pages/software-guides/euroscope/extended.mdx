@@ -36,17 +36,62 @@ While there is no point going over every setting in this guide, an exhaustive de
 
 ## EuroScope Lists
 
+Lists are an essential part of ES that every controller works with on a daily basis -- they are useful for non-verbal coordination with other controllers and keeping track of things that happen on the screen without having to memorise everything. Although all lists are structured differently and serve different purposes, they all have some features in common.
+
+1. The visibility of each individual list can be configured through the `QUICK SET` button on the top green ribbon.
+
+![ES top green ribbon with "QUICK SET" selected](../../../img/quick_set.png)
+
+2. All lists' length and contents can be customised by pressing buttons the top-left corner of any given list.
+   - The most left button allows for changing the list's length.
+   - The `F` button allows for selection of columns to be visible or not.
+   - The `S` button allows for complete customisation of a given list's contents.
+
+<div className="leading-7 [&:not(:first-child)]:mt-6 [&>*>img]:w-[68px]">
+  ![ES list configuration buttons](../../../img/ES_list_corner.png)
+</div>
+
 ### Departure List
+
+The primary way that GMC and TWR ATCOs interface with EuroScope is through the departure list. It contains all aircraft that are currently on the ground and have filed a flight plan originating from the airport they are currently at. An example of how a departure list looks is available below.
+
+![ES departure list with 3 aircraft; 2 have clearance, 1 is cleared for pushback and startup; all aircraft are assigned CFL of 4000ft and a squawk within the valid international squawk range](../../../img/departure_list.png)
+
+In general it is possible to check if a given row of the departure list is set up correctly by verifying its compliance with the following requirements:
+
+- The aircraft's status (STS) is equal to its clearance limit.
+- The aircraft has received/is to receive appropriate departure instructions (SID, etc.) based on their flight rule.
+- The aircraft's cleared flight level (CFL) is set to 4000ft for IFR traffic, unless otherwise coordinated, and 1500ft for VFR traffic, unless otherwise coordinated.
+- The aircraft has a valid squawk code assigned (ASSR) based on its destination (international/domestic).
+- The flight plan has a valid route and a correct requested flight level (RFL) for their direction of flight.
 
 ### Arrival List
 
+The arrival list shows all aircraft that are within a certain distance of an airport as well as those that have already arrived. It also contains a text field designated for notes, remarks, and/or stand assignment. The arrival list has been largely made redundant with the introduction of the [Ground Radar Plugin](./plugins#ground-radar-plugin).
+
+![ES arrival list with 3 aircraft](../../../img/arrival_list.png)
+
 ### Sector Inbound List
+
+The sector inbound list (often shortened to <abbr title="Sector Inbound List">SIL</abbr>) shows all traffic that is "concerned" for the controller in question. Traffic is given the "concerned" state if it is not on the ground and falls into one of 3 categories:
+
+- The traffic's flight plan crosses or is tangent to a part of the airspace that is within the AoR of the controller in question.
+- The traffic's trajectory is such that they shall cross (either lawfully or unlawfully) the border of the given controller's AoR.
+- The traffic is currently within the controller's AoR, but the controller has not yet assumed responsibility over its TAG.
+
+![ES sector inbound list with 4 Air Baltic aircraft](../../../img/SIL.png)
+
+The SIL can be used for non-verbal coordination with other controllers by requesting a non-default Coordinated Point of Entry (COPN) or Planned Entry Level (PEL). Such a request can be created by pressing <kbd>`LMB`</kbd> on the value of interest and inputting a new one.
+
+In addition to its capacity for coordination the SIL acts as a source of TAG information for aircraft not in the vicinity of the given controller's AoR. The availability of such information is crucial for pre-planning and workload management.
 
 ### Sector Exit List
 
 ### Controller List
 
 ### METAR List
+
+## Flight Plan Creation
 
 ## Leader Lines
 

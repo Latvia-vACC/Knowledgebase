@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
 import React from "react";
@@ -85,7 +84,7 @@ const themeConfig = {
       dark: 64.4,
     },
   },
-  head() {
+  head: function useHead() {
     const { frontMatter } = useConfig();
     const { asPath } = useRouter();
 
@@ -103,6 +102,7 @@ const themeConfig = {
             ? frontMatter.title
             : `${frontMatter.title} - Latvia vACC Knowledgebase`}
         </title>
+        <meta property="description" content={frontMatter.description} />
         <meta name="theme-color" content="#9d2235" />
         <meta property="og:url" content={url} />
         <meta
