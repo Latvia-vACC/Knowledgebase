@@ -12,20 +12,23 @@ const Logo = () => {
   const { theme, systemTheme } = useTheme();
 
   return (
-    <Image
-      src={
-        theme === "system"
-          ? systemTheme === "dark"
-            ? logo_dark
-            : logo_light
-          : theme === "dark"
-            ? logo_dark
-            : logo_light
-      }
-      alt="Latvia vACC"
-      width="192"
-      className="min-w-[192px]"
-    />
+    <>
+      <Image
+        src={
+          theme === "system"
+            ? systemTheme === "dark"
+              ? logo_dark
+              : logo_light
+            : theme === "dark"
+              ? logo_dark
+              : logo_light
+        }
+        alt="Latvia vACC"
+        width="192"
+        className="min-w-[192px]"
+      />
+      <span className="sr-only">Home - Latvia vACC Knowledgebase</span>
+    </>
   );
 };
 
