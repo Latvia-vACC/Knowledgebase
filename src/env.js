@@ -17,7 +17,10 @@ export const env = createEnv({
    */
   client: {
     // NEXT_PUBLIC_CLIENTVAR: z.string(),
-    NEXT_PUBLIC_PROTECTED: z.enum(["true", "false"]).transform((v) => v === "true").default("true"),
+    NEXT_PUBLIC_PROTECTED: z
+      .enum(["true", "false"])
+      .transform((v) => v === "true")
+      .default("true"),
     NEXT_PUBLIC_PASSWORD: z.string(),
   },
 
