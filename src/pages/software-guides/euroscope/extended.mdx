@@ -95,7 +95,23 @@ Since SEL displays aircraft that are in most cases already in the controller's A
 
 ### Controller List
 
+The controller list displays controllers that are within the range of the controller viewing the list. The list can be configured and filtered by pressing buttons in the green ribbon defining the list.
+
+![ES controller list (empty)](../../../img/controller_list.png)
+
+Below are some notable features of the controller list:
+
+- Controller IDs are displayed next to controller callsigns; they can be used in aliases such as `.cont`.
+- Double clicking on a given controller opens a chat with the controller in the bottom sections of ES.
+- Right clicking on a given controller gives the option to call them on VCCS (the internal ES TeamSpeak server, deprecated) or see their controller information (ATIS).
+
 ### METAR List
+
+The METAR list's purpose is right in its title: it displays METARs of the airfields that the controller chooses. Depending on ES configuration (can be changed in `OTHER SET -> General Settings`) the list will display all "active" airfields (i.e. those within the given controller's AoR) and update them dynamically or display only those that the controller manually adds to the list.
+
+![ES METAR list with METARs for EVVA, EVLA, EVGA, and EVRA](../../../img/metar_list.png)
+
+Airfields' METARs can be manually added to the list by using the `.QD [ICAO]` command (shortcut <kbd>`F2`</kbd>).
 
 ## Flight Plan Creation
 
