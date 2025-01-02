@@ -115,7 +115,7 @@ Airfields' METARs can be manually added to the list by using the `.QD [ICAO]` co
 
 ## Airspace Management Tools
 
-### Flight Plan Creation[<span className="text-red-500 remove-parent-underline">\*</span>](#fp-visibility)
+### Flight Plan Creation
 
 Although rare, sometimes a flight plan needs to be created for a pilot instead of them filing it on the network. Since ATCOs are not airline operations staff, no controller is expected to file full-fletched IFR flight plans, however, this functionality is still used to create basic flight plans for VFR pilots.
 
@@ -133,18 +133,30 @@ To create a flight plan, the following fields must always be filled out before p
 It is also preferred that the squawk and CFL be filled out as well for the sake of convenience.
 
 <br />
-<span id="fp-visibility">
-  <span className="text-red-500">\*</span> A flight plan created in such a way
-  is **NOT** visible to adjacent ATCOs.
-</span>
+<u>
+  Note: A flight plan created in such a way is **NOT** visible to adjacent
+  ATCOs.
+</u>
 
 ### Leader Lines
+
+Leader lines are an essential tool for pre-planning and ensuring lateral separation between aircraft. The screenshot below shows an example of a 2-minute leader line.
+
+![BTI7LZ TAG and its 2-minute leader line](../../../img/leader_line_example.png)
+
+Leader lines show the hypothetical position of a given aircraft in the future, assuming said aircraft maintains its present heading. Leader lines can be configured by time (in minutes) and by distance (in NM). Time-based leader lines are calculated accounting for the current ground speed (GS) of the aircraft. Distance-based leader lines are static. Leader line settings are available on the ES top green ribbon and look as shown in the screenshot below.
+
+![Leader line settings on the ES top green ribbon](../../../img/leader_line_settings.png)
 
 ### Altitude Filter
 
 Another function of EuroScope that is useful for decluttering the current active view is the altitude filter. It is rather obvious that a GMC controller need not to see aircraft at FL370, therefore an altitude filter is set up in the range `GND-040` on the ES top green ribbon.
 
 ![ES Altitude Filter Button showing range GND-040](../../../img/altitude_filter.png)
+
+The default setting for the radar view on the other hand is `002-UNL`.
+
+![ES Altitude Filter Button showing range 002-UNL](../../../img/altitude_filter_radar.png)
 
 Said button is clickable and opens the display settings dialog. The available options in that dialog are rather straight forward and the settings for configuring the altitude filter are at the top of said dialog.
 
