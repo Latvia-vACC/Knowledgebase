@@ -113,20 +113,45 @@ The METAR list's purpose is right in its title: it displays METARs of the airfie
 
 Airfields' METARs can be manually added to the list by using the `.QD [ICAO]` command (shortcut <kbd>`F2`</kbd>).
 
-## Flight Plan Creation
+## Airspace Management Tools
 
-## Leader Lines
+### Flight Plan Creation[<span className="text-red-500 remove-parent-underline">\*</span>](#fp-visibility)
 
-## Altitude Filter
+Although rare, sometimes a flight plan needs to be created for a pilot instead of them filing it on the network. Since ATCOs are not airline operations staff, no controller is expected to file full-fletched IFR flight plans, however, this functionality is still used to create basic flight plans for VFR pilots.
+
+Aircraft without a flight plan do not show up in any list except for the "Flight Plan List", therefore there are 2 ways of accessing the flight plan dialog of such an aircraft.
+
+- Option 1: find the aircraft in the "Flight Plan List" and click on it (such an aircraft will always be marked with `NOFP`).
+- Option 2: "assume" the TAG of the aircraft and open the flight plan dialog from the [Sector Exit List](#sector-exit-list).
+
+To create a flight plan, the following fields must always be filled out before pressing <kbd>`OK`</kbd>:
+
+- Altitude (i.e. RFL)
+- Departure airfield
+- Destination airfield
+
+It is also preferred that the squawk and CFL be filled out as well for the sake of convenience.
+
+<br />
+<span id="fp-visibility">
+  <span className="text-red-500">\*</span> A flight plan created in such a way
+  is **NOT** visible to adjacent ATCOs.
+</span>
+
+### Leader Lines
+
+### Altitude Filter
 
 Another function of EuroScope that is useful for decluttering the current active view is the altitude filter. It is rather obvious that a GMC controller need not to see aircraft at FL370, therefore an altitude filter is set up in the range `GND-040` on the ES top green ribbon.
 
 ![ES Altitude Filter Button showing range GND-040](../../../img/altitude_filter.png)
 
-## Measure Tool
+Said button is clickable and opens the display settings dialog. The available options in that dialog are rather straight forward and the settings for configuring the altitude filter are at the top of said dialog.
 
-## Distance Tool
+### Measure Tool
 
-## Separation Tool
+### Distance Tool
 
-## Flight Plan Separation Tool
+### Separation Tool
+
+### Flight Plan Separation Tool
