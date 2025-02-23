@@ -3,8 +3,23 @@ title: vATIS Guide
 description: This page provides a detailed guide on installing vATIS as well as operating it in EVRR FIR.
 ---
 
+import { ArrowDownToLineIcon, ExternalLinkIcon } from "lucide-react";
+
 # vATIS Guide
 
-## Installation and EVRR Config
+In accordance with the [Air Traffic Control Frequency and Information Management Policy](https://vatsim.net/docs/policy/air-traffic-control-frequency-and-information-management-policy) any controller is allowed to facilitate up to 4 ATIS connections on VATSIM. vATIS is the designated ATIS hosting client in EVRR FIR. It comes in pair with a dedicated config designed for use within EVRR FIR. Both are available for download by clicking the buttons below.
 
-## Creating an ATIS Connection
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ArrowDownToLineIcon size={18}/>Download vATIS</button>](https://hub.vatis.app/download/windows)
+
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ArrowDownToLineIcon size={18}/>Download EVRR FIR Config for vATIS</button>](/assets/vATIS_Profile_EVRR.json)
+
+## Usage Guide
+
+In short, vATIS is not overly complex. To use the client appropriately, only 4 steps have to be followed:
+
+1. Import the EVRR FIR Config.
+2. Select the runway in use and preferred type of approach.
+3. Apply appropriate `NOTAMs` and `Airport Conditions` by clicking the relevant labels.
+4. Press `Connect`!
+
+Further reading and additional information is available in the [vATIS official Documentation](https://vatis.app/docs/).

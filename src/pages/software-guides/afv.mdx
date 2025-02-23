@@ -1,18 +1,29 @@
 ---
 title: AFV Guide
-description: This page provides a list of available Audio For VATSIM clients and a basic guide on using them.
+description: This page provides a list of available Audio For VATSIM clients and suggested settings for their use.
 ---
+
+import { ArrowDownToLineIcon, ExternalLinkIcon } from "lucide-react";
 
 # Audio for VATSIM Guide
 
-## Audio For VATSIM Standalone Client
+Since 2019 VATSIM has been using a standalone audio transmission protocol called **Audio for VATSIM**. At the moment, there are 3 clients available to use said protocol. The up-to-date list of approved AFV clients is always available in the [Approved Software Policy](https://vatsim.net/docs/policy/approved-software). Lativa vACC recommends the AFV Standalone Client or TrackAudio for use within the EVRR FIR.
 
-### Installation
+## Audio for VATSIM Standalone Client
 
-### Settings
+The AFV Standalone Client is available for download by clicking the button below.
+
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ArrowDownToLineIcon size={18}/>Download AFV Standalone Client</button>](https://audio.vatsim.net/downloads/standalone)
+
+- It is recommended that when staffing radar positions the controller should cross-couple (`XC`) their own primary frequency for better reach among pilots on opposite ends of one's airspace.
+- It is strongly recommended that controllers do not disable `Realistic ATC Audio Effects` while using this AFV client.
 
 ## TrackAudio
 
-### Installation
+TrackAudio is made by Pierre Ferran - a former Director of the French vACC and a respected software developer within the VATSIM community. TrackAudio is available for download by following the link below.
 
-### Settings
+[<button className="flex h-10 remove-parent-underline items-center gap-1 rounded-md bg-latvia-carmine px-3 py-2 font-medium text-white no-underline transition-colors hover:bg-latvia-carmine/90"><ExternalLinkIcon size={18}/>Download TrackAudio</button>](https://github.com/pierr3/TrackAudio/releases/latest)
+
+- It is recommended that when staffing radar positions the controller should cross-couple (`XCA`) their own primary frequency for better reach among pilots on opposite ends of one's airspace.
+- It is strongly recommended that controllers do not disable `Radio Effects` while using this AFV client.
+- It is recommended that controllers use `Garex 220` as `Radio Hardware` to achieve maximum realism in their radio transmissions.
