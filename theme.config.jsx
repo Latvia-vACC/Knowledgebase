@@ -87,6 +87,9 @@ const themeConfig = {
       dark: 64.4,
     },
   },
+  sidebar: {
+    defaultMenuCollapseLevel: 1,
+  },
   head: function useHead() {
     const { frontMatter } = useConfig();
     const { asPath } = useRouter();

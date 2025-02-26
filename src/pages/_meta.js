@@ -25,23 +25,23 @@ const contents = {
     items: [
       {
         title: "GMC",
-        href: "/sop/gmc",
+        href: "/sop/gmc/introduction",
       },
       {
         title: "TWR",
-        href: "/sop/twr",
+        href: "/sop/twr/introduction",
       },
       {
         title: "APS",
-        href: "/sop/aps",
+        href: "/sop/aps/introduction",
       },
       {
         title: "ACS",
-        href: "/sop/acs",
+        href: "/sop/acs/introduction",
       },
       {
         title: "AFIS/FIS",
-        href: "/sop/fis",
+        href: "/sop/fis/introduction",
       },
     ],
   },

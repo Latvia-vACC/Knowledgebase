@@ -7,7 +7,14 @@ const contents = {
       pagination: false,
       timestamp: false,
     },
+    display: "hidden",
   },
+
+  gmc: "GMC",
+  twr: "TWR",
+  aps: "APS",
+  acs: "ACS",
+  fis: "AFIS/FIS",
 };
 
 export default contents;
