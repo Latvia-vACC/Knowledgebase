@@ -1,0 +1,73 @@
+---
+title: GMC SOP - Procedures
+description: This page describes the relevant procedures for Ground Movement Control in EVRR FIR.
+---
+
+# GMC SOP - Procedures
+
+## Standard Procedures
+
+### Selection of Runway-in-use
+
+The duty of selecting the runway-in-use is a joint responsibility of Rīga Tower and Rīga Approach. Should both of those stations be offline, the responsibility is transferred to the highest station online; this includes Rīga Ground, should it be the only station online.
+
+The main method of determining the runway-in-use is based on surface wind. The current METAR always contains that information in the following format: `35011KT`. This contains the direction of the wind (350 degrees in this case) and its speed (11 knots). If the wind direction is closer to 360 degrees (from 270 degrees to 089 degrees), runway 36 shall be selected; otherwise, if the wind direction is closer to 180 degrees (from 090 degrees to 269 degrees), runway 18 shall be selected.
+
+The following factors can be also taken into consideration when selecting the runway in use:
+
+- approach and landing facilities serviceability;
+- meteorological conditions (RVR);
+- reported or forecast wind shear, or when thunderstorms are expected to affect the approach or departure;
+- air traffic flow/direction;
+- preferential runway system.
+
+A runway-in-use direction with a tail wind component, including gusts, not exceeding 5 kt can be assigned, when:
+
+- air traffic flow expected to runway direction;
+- the crosswind component, including gusts, does not exceed 15 kt and/or;
+- the runway condition is not worse than "WET" and braking action is not worse than "GOOD" and;
+- braking action is not adversely affected by runway contaminants such as ice, slush, snow, frost and water.
+
+The preferential runway system is applied as follows (time given in Rīga local timezone):
+
+|              | <strong className="font-bold">00:00 to 17:59</strong> | <strong className="font-bold">18:00 to 23:59</strong> |
+| :----------: | :---------------------------------------------------: | :---------------------------------------------------: |
+| **TAKE OFF** |                         18/36                         |                         18/36                         |
+| **LANDING**  |                         18/36                         |                          36                           |
+
+### Assignment of SSR (Squawk) Codes
+
+All aircraft must be assigned a valid SSR code. In Riga FIR, the following squawk ranges apply:
+
+- **4140 – 4177** for all international flights[<span className="text-red-500 remove-parent-underline">\*</span>](#unrealistic-ssr-range)
+- **0060 – 0077** for all domestic flights (including domestic VFR)
+
+<div
+  role="p"
+  id="unrealistic-ssr-range"
+  className={"_leading-7 [&:not(:first-child)]:_mt-6"}
+>
+  <span className="text-red-500">\*</span> The SSR code range used on VATSIM
+  differs from the one used in real life due to limitations in the way SSR codes
+  are allocated on VATSIM.
+</div>
+
+### Flight Plan Validation
+
+All aircraft receiving a departure clearance must have a valid flight plan filed (with an exception for VFR flights as long as their intentions are clearly communicated). A flight plan is valid if all of the following conditions are met:
+
+- The route starts with one of the waypoints that a SID leads to.
+- The route has a Coordination Point Exit (COPX) with one of the FIRs that neighbour the Riga FIR.
+- The route has COPX points on all FIR borders that it passes through.
+- The Requested Flight Level (RFL) is appropriate for the direction of flight.
+
+The determination whether the RFL is appropriate for the direction of flight is made using the semicircular rule:
+
+- **EASTBOUND** flights must fly on **ODD** flight levels.
+- **WESTBOUND** flights must fly on **EVEN** flight levels.
+
+Designation of odd and even flight levels is sequential up until FL410, thus such FLs as 210, 230, 330, 350, 370, etc. are odd and FLs 220, 280, 300, 320, 340, 360, etc. are even. FL410, however, is the upper limit of RVSM airspace, after which the designation of flight levels happens only every other level, i.e. FL430 is even, FL450 is odd, etc. After FL510, the designation becomes limited to only every 4 levels, therefore, after FL510, the next level is FL550.
+
+### Departure Clearances
+
+## Non-standard Procedures

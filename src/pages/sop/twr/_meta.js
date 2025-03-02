@@ -1,5 +1,12 @@
 const contents = {
-  introduction: "Introduction",
+  general: "General",
+  procedures: "Procedures",
+  phraseology: {
+    title: "Phraseology",
+    theme: {
+      pagination: false,
+    },
+  },
 };
 
 export default contents;
