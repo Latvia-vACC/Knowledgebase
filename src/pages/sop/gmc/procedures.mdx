@@ -3,9 +3,11 @@ title: GMC SOP - Procedures
 description: This page describes the relevant procedures for Ground Movement Control in EVRR FIR.
 ---
 
+import { Callout } from "nextra/components";
+
 # GMC SOP - Procedures
 
-## Standard Procedures
+## Basic Procedures
 
 ### Selection of Runway-in-use
 
@@ -39,8 +41,8 @@ The preferential runway system is applied as follows (time given in Rīga local 
 
 All aircraft must be assigned a valid SSR code. In Riga FIR, the following squawk ranges apply:
 
-- **4140 – 4177** for all international flights[<span className="text-red-500 remove-parent-underline">\*</span>](#unrealistic-ssr-range)
-- **0060 – 0077** for all domestic flights (including domestic VFR)
+- **4140 – 4177** for all international flights;[<span className="text-red-500 remove-parent-underline">\*</span>](#unrealistic-ssr-range)
+- **0060 – 0077** for all domestic flights (including domestic VFR).
 
 <div
   role="p"
@@ -54,20 +56,79 @@ All aircraft must be assigned a valid SSR code. In Riga FIR, the following squaw
 
 ### Flight Plan Validation
 
-All aircraft receiving a departure clearance must have a valid flight plan filed (with an exception for VFR flights as long as their intentions are clearly communicated). A flight plan is valid if all of the following conditions are met:
+All aircraft receiving a departure clearance must have a valid flight plan filed (with an exception for VFR flights as long as their intentions are clearly communicated).
+
+<Callout type="error" emoji="⚠️">
+  Regardless of the presence of a flight plan or lack thereof all aircraft must
+  have a callsign associated with them and their type must be known.
+</Callout>
+
+A flight plan is valid if all of the following conditions are met:
 
 - The route starts with one of the waypoints that a SID leads to.
 - The route has a Coordination Point Exit (COPX) with one of the FIRs that neighbour the Riga FIR.
 - The route has COPX points on all FIR borders that it passes through.
 - The Requested Flight Level (RFL) is appropriate for the direction of flight.
 
-The determination whether the RFL is appropriate for the direction of flight is made using the semicircular rule:
+The determination whether the RFL is appropriate for the direction of flight is made using the semicircular rule.
 
 - **EASTBOUND** flights must fly on **ODD** flight levels.
 - **WESTBOUND** flights must fly on **EVEN** flight levels.
 
-Designation of odd and even flight levels is sequential up until FL410, thus such FLs as 210, 230, 330, 350, 370, etc. are odd and FLs 220, 280, 300, 320, 340, 360, etc. are even. FL410, however, is the upper limit of RVSM airspace, after which the designation of flight levels happens only every other level, i.e. FL430 is even, FL450 is odd, etc. After FL510, the designation becomes limited to only every 4 levels, therefore, after FL510, the next level is FL550.
+Designation of odd and even flight levels is sequential up until FL410, thus such FLs as 210, 230, 330, 350, 370, etc. are odd and FLs 220, 280, 320, 340, 360, etc. are even. FL410, however, is the upper limit of RVSM airspace, after which the designation of flight levels happens only every other level, i.e. FL430 is even, FL450 is odd, etc. After FL510, the designation becomes limited to only every 4 levels, therefore, after FL510, the next level is FL550.
 
-### Departure Clearances
+### Departure Clearances (IFR)
 
-## Non-standard Procedures
+A departure clearances is the initial clearance an IFR flight receives on first contact with ATC. For the departure clearance to be issued all of the following conditions must be true.
+
+- The pilot must have filed a valid flight plan.
+- The requested flight level in the flight plan must be valid for the planned direction of flight.
+- The pilot must be aware of the current weather conditions at their departure airport. Awareness of said conditions is determined based on the knowledge of the current ATIS identification letter and local QNH by the pilot.
+- The ATCO issuing the clearance must be aware of the aircraft's location and type.
+
+#### Contents of a Departure Clearance
+
+A departure clearance must contain all of the following items in the order given.
+
+1. Standard Instrument Departure.
+2. SSR code.
+
+Should the pilot be unable to execute the issued clearance or the pilot's request be that not requiring a Standard Instrument Departure, further departure instruction shall be appended to the end of the departure clearance.
+
+### Pushback and Start-up
+
+A pushback and start-up clearance is needed to authorise initial movement on the apron for a given aircraft and to allow for them to begin maneuvering/taxiing towards the runway-in-use. Such a clearance may only be issued once the aircraft in question has matched their SSR code to the one assigned in the departure clearance.
+
+<Callout type="error" emoji="⚠️">
+  Pushback clearances in EVRR FIR are issued **WITHOUT** a direction provided.
+</Callout>
+
+There are cases when pushback might not be required for a given aircraft. The following stands do not require pushback.
+
+- 100
+- 101
+- 103
+- 108
+- 109
+- 112 – 115
+- 204 – 208 (for aircraft not larger than DH8D)
+- 224 (for aircraft not larger than DH8D)
+- 226
+- 290 – 292 (LIGHT aircraft only)
+- 309
+- 311 – 317
+- 461 – 462 (LIGHT aircraft only)
+- 471 – 479 (LIGHT aircraft only)
+
+The following pushback require a straight pushback due to their proximity to the terminal and other airport infrastructure.
+
+- 102
+- 105
+- 302
+- 303
+
+### Ground Movement
+
+## Advanced Procedures
+
+### Departure Clearances (VFR)

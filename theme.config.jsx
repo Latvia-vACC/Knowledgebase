@@ -59,23 +59,27 @@ const themeConfig = {
     content: (
       <span>
         Apache License 2.0 ©{" "}
-        <Link href="https://lv-vacc.org" target="_blank">
+        <Link
+          href="https://lv-vacc.org"
+          target="_blank"
+          className="text-latvia-carmine underline"
+        >
           Latvia vACC
         </Link>{" "}
         2006-{new Date().getFullYear()}
       </span>
     ),
   },
-  // banner: {
-  //   key: "not-real",
-  //   content: (
-  //     <span className="h-fit overflow-visible whitespace-normal text-wrap">
-  //       ❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources,
-  //       materials, or information provided by Latvia vACC should be used for
-  //       real world aviation! ❗
-  //     </span>
-  //   ),
-  // },
+  banner: {
+    key: "not-real",
+    content: (
+      <span className="h-fit overflow-visible whitespace-normal text-wrap">
+        ❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources,
+        materials, or information provided by Latvia vACC should be used for
+        real world aviation! ❗
+      </span>
+    ),
+  },
   logo: Logo,
   color: {
     hue: {
