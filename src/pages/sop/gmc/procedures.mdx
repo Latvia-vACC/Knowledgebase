@@ -79,14 +79,14 @@ Designation of odd and even flight levels is sequential up until FL410, thus suc
 
 ### Departure Clearances (IFR)
 
-A departure clearances is the initial clearance an IFR flight receives on first contact with ATC. For the departure clearance to be issued all of the following conditions must be true.
+A departure clearance is the initial clearance an IFR flight receives on first contact with ATC. For the departure clearance to be issued all of the following conditions must be true.
 
 - The pilot must have filed a valid flight plan.
 - The requested flight level in the flight plan must be valid for the planned direction of flight.
 - The pilot must be aware of the current weather conditions at their departure airport. Awareness of said conditions is determined based on the knowledge of the current ATIS identification letter and local QNH by the pilot.
 - The ATCO issuing the clearance must be aware of the aircraft's location and type.
 
-#### Contents of a Departure Clearance
+#### Contents of an IFR Departure Clearance
 
 A departure clearance must contain all of the following items in the order given.
 
@@ -94,6 +94,14 @@ A departure clearance must contain all of the following items in the order given
 2. SSR code.
 
 Should the pilot be unable to execute the issued clearance or the pilot's request be that not requiring a Standard Instrument Departure, further departure instruction shall be appended to the end of the departure clearance.
+
+#### Specifics of RIX Riga Airport
+
+The following rules apply when issuing an IFR departure clearance out of RIX Riga Airport.
+
+- Runways 36 and 18 use H and F SIDs by default.
+- J SIDs are available for runway 36 on request; EVRA APS must be notified should a J SID be issued.
+- All non-standard clearances must be requested for release from (i.e. coordinated with) relevant ATS units.
 
 ### Pushback and Start-up
 
@@ -103,15 +111,15 @@ A pushback and start-up clearance is needed to authorise initial movement on the
   Pushback clearances in EVRR FIR are issued **WITHOUT** a direction provided.
 </Callout>
 
-There are cases when pushback might not be required for a given aircraft. The following stands do not require pushback.
+There are cases when pushback might not be required for a given aircraft. At Rīga the following stands do not require pushback.
 
 - 100
 - 101
 - 103
 - 108
 - 109
-- 112 – 115
-- 204 – 208 (for aircraft not larger than DH8D)
+- 204 (for aircraft not larger than DH8D)
+- 208 (for aircraft not larger than DH8D)
 - 224 (for aircraft not larger than DH8D)
 - 226
 - 290 – 292 (LIGHT aircraft only)
@@ -120,12 +128,14 @@ There are cases when pushback might not be required for a given aircraft. The fo
 - 461 – 462 (LIGHT aircraft only)
 - 471 – 479 (LIGHT aircraft only)
 
-The following pushback require a straight pushback due to their proximity to the terminal and other airport infrastructure.
+The following stands require a straight pushback due to their proximity to the terminal and other airport infrastructure.
 
 - 102
 - 105
 - 302
 - 303
+
+An exhaustive table describing stand characteristics and limits is available in the Republic of Latvia AIP chart [EVRA AD 2.24.2](https://ais.lgs.lv) on page 2.
 
 ### Ground Movement
 
@@ -142,9 +152,13 @@ The designated destination of a taxi route can be a holding point (both named an
   on unless it is standing on taxiway F.
 </Callout>
 
+<Callout type="error" emoji="⚠️">
+  Taxiing aircraft shall observe the ground speed limit of **30 knots**.
+</Callout>
+
 #### Departure Taxi Routes
 
-Departing aircraft should be directed to taxi to one of the holding points adjacent to the runway-in-use. The default holding points are reachable via taxiway A for runway 36 and via taxiway G for runway 18, however, other intersections may be offered to pilots in non-LVP conditions. Below is a table of intersections available at Rīga.
+Departing aircraft should be directed to taxi to one of the holding points adjacent to the runway-in-use. The default holding points are reachable via taxiway A for runway 36 and via taxiway G for runway 18, however, other intersections may be offered to pilots in non-LVP conditions. Below is a table of runway intersections available at Rīga.
 
 | Runway | Intersection | TORA/TODA (m) |                            Remarks                             |
 | :----: | :----------: | :-----------: | :------------------------------------------------------------: |
@@ -157,10 +171,183 @@ Departing aircraft should be directed to taxi to one of the holding points adjac
 
 Although use of the intersections is not limited by wingspan or MTOW, it is fairly uncommon for WTC H traffic to use any intersection other than A or G, therefore pilots of such aircraft need not to be explicitly offered intersection departure opportunities to prevent unnecessary frequency congestion.
 
-#### De-icing pads
+#### De-icing Procedures
+
+Should de-icing be required due to weather conditions, any aircraft requesting such services shall be provided with requested de-icing fluid at an appropriate apron/designated position. Republic of Latvia AIP [EVRA AD 2.20.9.1](https://ais.lgs.lv) stipulates the following rules for determining the appropriate de-icing position:
+
+> Aircraft de-icing shall be carried out in areas specifically designated by the airport. Jet airplanes with engines mounted under the wing and propeller type aircraft will normally be de-iced on remote de-icing pads with running engines. Aircraft with tail mounted engines which during tactile check have been found to have "clear ice" de-icing shall be carried out on apron with engines off.
+
+Aircraft carrying out de-icing on an apron position are expected to notify GMC appropriately, though no assistance is expected from the GMC ATCO. An apron position may either be a parking stand or the aircraft's position after pushback only with engines off. Aircraft requiring the use of a de-icing pad are expected to request taxi instructions appropriately from GMC.
+
+At Rīga there are 8 de-icing pads placed symmetrically next to the runway. De-icing pads adjacent to runway 36 are designated as DS1 through DS4 while those adjacent to runway 18 are designated as DN1 through DN4. Although there are no set rules for the use of each de-icing pad, below is a table explaining the generally understood way of assigning de-icing pads to requesting aircraft.
+
+| De-icing Pad |                         Limits                          |                         Remarks                         |
+| :----------: | :-----------------------------------------------------: | :-----------------------------------------------------: |
+|   DS4, DN4   |                   Max. wingspan 36 m                    |                  Primary de-icing pads                  |
+|   DS1, DN1   |                   Max. wingspan 36 m                    |                 Secondary de-icing pads                 |
+|   DS3, DN3   | Not suited for B748, A388, and similarly sized aircraft |                           NIL                           |
+|   DS2, DN2   |                           NIL                           | To be used for B748, A388, and similarly sized aircraft |
 
 #### Arrival Taxi Routes
+
+Arriving aircraft should be directed to taxi to a designated stand. In most cases the optimal taxi route matches the shortest possible route barring any safety concerns and application of priority rules. Below is a non-exhaustive table describing stand allocation rules at Rīga.
+
+|     Stand      | Origin Filter (Schengen[<span className="text-red-500 remove-parent-underline">\*</span>](#what-is-schengen)) |              Limits              |                                          Remarks                                          |
+| :------------: | :-----------------------------------------------------------------------------------------------------------: | :------------------------------: | :---------------------------------------------------------------------------------------: |
+|      100       |                                                      NIL                                                      |        Max. wingspan 65 m        |             Frequently used for heavy aircraft; blocks stands 112 through 115             |
+|      101       |                                                 Schengen ONLY                                                 |        Max. wingspan 29 m        |                                            NIL                                            |
+|      103       |                                                 Schengen ONLY                                                 |        Max. wingspan 30 m        |                                            NIL                                            |
+| 102, 104 – 109 |                                                 Schengen ONLY                                                 |        Max. wingspan 36 m        |                                            NIL                                            |
+|      110       |                                                      NIL                                                      |        Max. wingspan 36 m        |                              Stand next to the VIP terminal                               |
+|    112, 113    |                                                      NIL                                                      |        Max. wingspan 36 m        |                        Block stand 100, and stands 112 through 115                        |
+|      114       |                                                      NIL                                                      |        Max. wingspan 52 m        |                       Blocks stand 100, and stands 112 through 115                        |
+|      115       |                                                      NIL                                                      |        Max. wingspan 42 m        |                       Blocks stand 100, and stands 112 through 115                        |
+|    204, 206    |                                                      NIL                                                      |      Max. wingspan 27,05 m       |                                            NIL                                            |
+| 205, 207, 208  |                                                      NIL                                                      |      Max. wingspan 35,92 m       |                                            NIL                                            |
+|   214 – 218    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      219       |                                                      NIL                                                      |        Max. wingspan 35 m        |                           Very seldom used for non-BTI aircraft                           |
+|      224       |                                                      NIL                                                      |       Max. wingspan 35,9 m       |                                            NIL                                            |
+|      225       |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      226       |                                                      NIL                                                      | Max. wingspan 36 m (see remarks) |            Contrary to designated max. wingspan was used for A225 in the past             |
+|    227, 228    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      229       |                                                      NIL                                                      |      Max. wingspan 28,91 m       |                         Is sometimes used for helicopter storage                          |
+|      230       |                                                      NIL                                                      |       Max. wingspan 28,5 m       |                         Is sometimes used for helicopter storage                          |
+|      290       |                                                      NIL                                                      |        Max. wingspan 36 m        |                           FBO stand; blocks stands 292 and 293                            |
+|      291       |                                                      NIL                                                      |       Max. wingspan 23,8 m       |                                         FBO stand                                         |
+|    292, 293    |                                                      NIL                                                      |       Max. wingspan 30,4 m       |                               FBO stand; blocks stands 290                                |
+|      300       |                                                      NIL                                                      |        Max. wingspan 65 m        |                       Aircraft must taxi into the stand via TWY U1                        |
+|      301       |                                               Non-Schengen ONLY                                               |        Max. wingspan 65 m        |                       Aircraft must taxi into the stand via TWY U1                        |
+|   302 – 305    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|   306 – 309    |                                               Non-Schengen ONLY                                               |        Max. wingspan 36 m        |                                            NIL                                            |
+|   311 – 316    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      317       |                                                      NIL                                                      |        Max. wingspan 32 m        |                                            NIL                                            |
+|   321 – 326    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      327       |                                                      NIL                                                      |        Max. wingspan 34 m        |                                            NIL                                            |
+|    401, 402    |                                                      NIL                                                      |        Max. wingspan 42 m        |                          Is sometimes used for aircraft storage                           |
+|      461       |                                                      NIL                                                      |        Max. wingspan 24 m        |                                         GA stand                                          |
+|      462       |                                                      NIL                                                      |      Max. wingspan 28,65 m       |                                         GA stand                                          |
+|   467 – 470    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                            NIL                                            |
+|      471       |                                                      NIL                                                      |        Max. wingspan 20 m        |                                  GA and helicopter stand                                  |
+|      472       |                                                      NIL                                                      |      Max. wingspan 23,93 m       |                                  GA and helicopter stand                                  |
+|    473, 474    |                                                      NIL                                                      |        Max. wingspan 22 m        |                                  GA and helicopter stand                                  |
+|      475       |                                                      NIL                                                      |        Max. wingspan 22 m        |                                         GA stand                                          |
+|      476       |                                                      NIL                                                      |      Max. wingspan 23,93 m       |                                         GA stand                                          |
+|      477       |                                                      NIL                                                      |      Max. wingspan 22,75 m       |                                         GA stand                                          |
+|      478       |                                                      NIL                                                      |      Max. wingspan 23,25 m       |                                         GA stand                                          |
+|      479       |                                                      NIL                                                      |        Max. wingspan 22 m        |                                         GA stand                                          |
+|      501       |                                                      NIL                                                      |       Max. wingspan 73,3 m       |                                Cargo stand, apron 5 (DHL)                                 |
+|    502, 503    |                                                      NIL                                                      |       Max. wingspan 68,4 m       |                                Cargo stand, apron 5 (DHL)                                 |
+|    511, 512    |                                                      NIL                                                      |        Max. wingspan 36 m        |                                Cargo stand, apron 5 (DHL)                                 |
+|    Apron Z3    |                                                      NIL                                                      |      Max. wingspan 42,36 m       | Located on the west side of the airfield outside of GMC AoR; engine run-up and test stand |
+
+<div
+  role="p"
+  id="what-is-schengen"
+  className={"_leading-7 [&:not(:first-child)]:_mt-6"}
+>
+  <span className="text-red-500">\*</span> The Republic of Latvia is a party to
+  the Schengen agreement that allows for unrestricted movement of people and
+  goods between 29 countries which are parties to the agreement. Further reading
+  is available on [The European Commission
+  website](https://home-affairs.ec.europa.eu/policies/schengen/schengen-area_en)
+  and on [Wikipedia](https://en.wikipedia.org/wiki/Schengen_Agreement).
+</div>
+
+An exhaustive table describing stand characteristics and limits is available in the Republic of Latvia AIP chart [EVRA AD 2.24.2](https://ais.lgs.lv) on page 2.
+
+### Transfer of Control and Communications
+
+Rīga Ground, the only GMC ATS unit in EVRR FIR is a non-radar station, therefore the transfer of control and transfer of communications from/to adjacent ATS units happens simultaneously. The only adjacent ATS unit to Rīga Ground is Rīga Tower.
+
+#### Departures
+
+Departing traffic should be transferred to the next ATS unit while taxiing to the runway-in-use at a sufficient distance from the holding point to ensure continuous movement past the holding point given a situation with no other traffic playing a factor. Executing a transfer just before the departing aircraft leaves taxiway F to join their planned runway intersection generally creates sufficient space to allow for continuous movement of traffic.
+
+#### Arrivals
+
+Arriving traffic shall switch to GMC frequency unless otherwise stated by TWR upon vacating the runway. All arriving traffic is expected to make the first call on the frequency to begin 2-way communications.
+
+### Coordination
+
+Coordination is an inalienable part of air traffic control. Timely and efficient coordinations ensures that all ATS units support each other and facilitate efficient operations at all times. Broadly all coordination between ATS units may be divided into 2 categories: **notifications** and **requests for release**.
+
+#### Notifications
+
+Notifications are designed to notify a neighbouring ATS unit of a condition that may impact their operations that is either unavoidable or for which the responsibility falls onto another ATS unit, or in case said impact is under most circumstances minimal. The receiving ATS unit maintains the right to refuse an incoming notification and request that adherence to standard procedures be resumed, though such refusal must be accompanied by a valid operational reason. Below is a table of required notifications from GMC to neighbouring ATS units.
+
+| Recipient |                    Condition                     |            Remarks            |
+| :-------: | :----------------------------------------------: | :---------------------------: |
+|    APS    |  A departing IFR aircraft is requesting a J SID  | Only when runway-in-use is 36 |
+|    TWR    |      Long-term unavailability of a taxiway       |  Reason must be communicated  |
+|    TWR    |     Unavailability of a runway intersection      |  Reason must be communicated  |
+|    TWR    | A departing aircraft is to occupy a de-icing pad |              NIL              |
+
+#### Requests for Release
+
+Unlike notifications requests for release require immediate action or some form of response from the receiving ATS unit. The receiving ATS unit maintains the right to refuse an incoming request for release as long as the refusal does not constitute a denial of service to any aircraft; such refusal must also be accompanied by a valid operational reason. Below is a table of required requests for release from GMC to neighbouring ATS units.
+
+| Recipient |                                       Condition                                        |                                                              Expected Response                                                              |                                          Remarks                                           |
+| :-------: | :------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------: |
+|    TWR    |                 A non-IFR aircraft is requesting a departure clearance                 |                                                       A relevant departure clearance                                                        | The aircraft stays on GMC frequency and GMC ATCO shall relay the issued clearance from TWR |
+|    APS    |            An IFR aircraft is requesting a non-standard departure clearance            |                                                       A relevant departure clearance                                                        |                                            NIL                                             |
+|    APS    |           An IFR aircraft is unable to follow a standard departure clearance           | A relevant departure clearance and/or instructions to mitigate the possible implications of the reported deviation from standard procedures |                                            NIL                                             |
+| TWR, APS  | An aircraft is requesting to depart from a runway other than the current runway-in-use |                                   Approval/Denial of the request and any additional relevant instructions                                   |                                            NIL                                             |
 
 ## Advanced Procedures
 
 ### Departure Clearances (VFR)
+
+#### Contents of a VFR Departure Clearance
+
+### Conditional Clearances
+
+### Helicopter Procedures
+
+Helicopter movement at Rīga is regulated by Republic of Latvia AIP [EVRA AD 2.16 and 2.20.10](https://ais.lgs.lv). Helicopters may take off both from the runway and from the helipad (next to stand 230). Special helicopter stands are available at Riga – H01 and H02. **ALL** helicopter movement must be coordinated with and released by Rīga Tower. The following rules apply to all helicopters at Rīga:
+
+- Any helicopter vacating the helipad must report “helipad vacated” or be asked to confirm this.
+- Helicopters with skid undercarriage are to use all ground taxiways as air taxiways.
+- All helicopters intending to air taxi should include the term “air taxi” in the taxi requests. If it is unclear, which type of taxi the pilot is requesting they shall be prompted to specify it.
+- Wheeled helicopters shall not use helicopter stands for turning on the ground and may ground taxi for departure when pre-aligned on the respective lead-out line. Wheeled helicopters shall not touch down or lift off on aircraft stands 313, 314, 315, and 316.
+- Helicopters landing on the helipad shall avoid, as far as practicable, overflying any other aircraft, de-icing pads, and all aprons except Apron 2. It is a joint duty of Rīga Ground and Rīga Tower to prevent violations of this rule.
+- Simultaneous movement on the helipad and H01/H02 stands is NOT allowed.
+- Simultaneous movement on the helipad and the runway is NOT allowed.
+- Any traffic overflying RIX Riga Airport at or below 1500 ft is considered to be an obstruction to runway movements (this includes both helicopters and fixed-wing aircraft).
+
+### Workload Management and Safety
+
+### Low Visibility Procedures
+
+Low Visibility Procedures shall be applied at Rīga in accordance with Republic of Latvia AIP [EVRA AD 2.22.4](https://ais.lgs.lv). The criteria for instantiating and cancelling LVP are as follows:
+
+- Standby for low visibility procedures is prompted by ATC when RVR is 700 m or less or the ceiling is 200 ft or less.
+- Low visibility procedures are effected by ATC when RVR is 550 m or less or the ceiling is 150 ft or less.
+- Low visibility procedures are cancelled by ATC when RVR is greater than 700 m and a continuing improvement in RVR conditions is anticipated, and the ceiling is greater than 250 ft.
+
+Pilots will be informed when low visibility procedures are in operation by ATIS or radio. Pilots will be informed over radio when LVP are cancelled. Low visibility operations will be suspended as a result of certain equipment failure/degradation modes or procedure breaches. ATC procedures do not allow for snow clearing on the manoeuvring area when LVP are effected but do allow for limited snow clearing on the manoeuvring area when standby for LVP is prompted.
+
+When LVP are effected, the following taxiways may be used to vacate the runway: A, B, C, Y, D, E, and G. Backtrack procedures are NOT allowed unless that is the only safe way to vacate the runway. When LVP are in force runway entries are limited to:
+
+- taxiway A for runway 36 (or taxiway B if A is not available);
+- taxiway G for runway 18 (or taxiway E if G is not available).
+
+ONLY taxiways with centre line lights shall be used for taxiing. A list of such taxiways can be found in the Republic of Latvia AIP [EVRA AD 2.24.1 Aerodrome Chart](https://ais.lgs.lv). Otherwise, presence of a “follow me” vehicle is required.
+
+When LVP are in force, all taxiing aircraft shall resort to using Intermediate Holding Positions (IHP) equipped with yellow IHP lights. Such IHP are located on the following positions:
+
+- on taxiway F at intersections with taxiways E, D, C, A, B, de-icing pad DS (south), de-icing pad DN (north), as well as IHP F1 and F2;
+- on taxiway G; IHP G1 and G2;
+- on taxiway A; IHP A1 and A2;
+- on taxiways E, D, C and B: ITHP before intersection with taxiway F.
+
+All aircraft taxiing to the runway-in-use shall be instructed to hold short of one of the IHP on taxiways A or G listed above. (IHP listed for taxiway F at intersections with taxiways B and E may be used when taxiways A and G respectively are unavailable)
+
+<Callout type="error" emoji="⚠️">
+  Taxiing aircraft shall observe the ground speed limit of **15 knots**.
+</Callout>
+
+## VATSIM Specifics
+
+### Communication Types
+
+### Use of Aliases and Commands
