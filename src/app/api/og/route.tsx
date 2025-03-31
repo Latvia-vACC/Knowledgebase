@@ -2,6 +2,8 @@
 import { ImageResponse } from "next/og";
 import { NextResponse, type NextRequest } from "next/server";
 
+import MultilineText from "./MultilineText";
+
 export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
@@ -87,11 +89,15 @@ export async function GET(req: NextRequest) {
         <Logo />
         <div tw="flex absolute w-full h-[65%]">
           <div tw="flex w-full items-center justify-center">
-            <span
-              tw={`text-${title!.length <= 35 ? 8 : title!.length <= 70 ? 7 : 6}xl text-center pb-3 mx-6 border-b-8 border-[#9d2235]`}
-            >
-              {!logoOnly ? title : ""}
-            </span>
+            {!logoOnly ? (
+              <MultilineText
+                tw={`text-${title!.length <= 35 ? 8 : title!.length <= 70 ? 7 : 6}xl text-center pb-3 mx-6 border-b-8 border-[#9d2235] flex items-center flex-col`}
+              >
+                {title ?? ""}
+              </MultilineText>
+            ) : (
+              ""
+            )}
           </div>
         </div>
         <svg
