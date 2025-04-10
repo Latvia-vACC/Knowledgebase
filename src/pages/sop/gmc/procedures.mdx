@@ -1,11 +1,11 @@
 ---
-title: GMC SOP - Procedures
+title: GMC SOP – Procedures
 description: This page describes the relevant procedures for Ground Movement Control in EVRR FIR.
 ---
 
 import { Callout } from "nextra/components";
 
-# GMC SOP - Procedures
+# GMC SOP – Procedures
 
 ## Basic Procedures
 
@@ -99,7 +99,7 @@ Should the pilot be unable to execute the issued clearance or the pilot's reques
 
 The following rules apply when issuing an IFR departure clearance out of RIX Riga Airport.
 
-- Runways 36 and 18 use H and F SIDs by default.
+- Runways 36 and 18 use H and F SIDs respectively by default.
 - J SIDs are available for runway 36 on request; EVRA APS must be notified should a J SID be issued.
 - All non-standard clearances must be requested for release from (i.e. coordinated with) relevant ATS units.
 
@@ -291,13 +291,37 @@ Unlike notifications requests for release require immediate action or some form 
 |    TWR    |                 A non-IFR aircraft is requesting a departure clearance                 |                                                       A relevant departure clearance                                                        | The aircraft remains on GMC frequency and GMC ATCO shall relay the clearance issued by TWR |
 |    APS    |            An IFR aircraft is requesting a non-standard departure clearance            |                                                       A relevant departure clearance                                                        | The aircraft remains on GMC frequency and GMC ATCO shall relay the clearance issued by APS |
 |    APS    |           An IFR aircraft is unable to follow a standard departure clearance           | A relevant departure clearance and/or instructions to mitigate the possible implications of the reported deviation from standard procedures |                                            NIL                                             |
-| TWR, APS  | An aircraft is requesting to depart from a runway other than the current runway-in-use |                                   Approval/Denial of the request and any additional relevant instructions                                   |                                            NIL                                             |
+| TWR, APS  | An aircraft is requesting to depart from a runway other than the current runway-in-use |                                   Approval/Refusal of the request and any additional relevant instructions                                   |                                            NIL                                             |
 
 ## Advanced Procedures
 
 ### Departure Clearances (VFR)
 
+Similarly to IFR aircraft, a departure clearance is the initial clearance a VFR flight receives. In EVRR FIR all departure clearances, including those for non-IFR traffic are issued while the traffic is still at its parking stand.
+
+For the departure clearance to be issued all of the following conditions must be true.
+
+- The aircraft type must be verbally communicated by the pilot and/or stated in the flight plan.
+- The aircraft must be equipped with a mode-A functioning transponder.
+- The number of souls on board must be verbally communicated by the pilot and/or stated in flight plan remarks.
+- The pilot's intentions must be verbally communicated. If a VFR flight plan is filed, it must include intentions matching the ones stated by the pilot.
+
+The details of the pilot's request must be communicated to Rīga TWR as part of a request for release. In response TWR is expected to issue a clearance to be communicated to the pilot by GMC. Any changes to the issued clearance must be coordinated with and approved by Rīga TWR.
+
 #### Contents of a VFR Departure Clearance
+
+A departure clearance must contain all of the following items in the given order.
+
+1. Departure instructions.
+2. Departure runway.
+3. Altitude restriction.
+4. SSR code.
+
+Although the responsibility to issue non-IFR clearances does not lie with GMC, the following section is copied from the [TWR SOP – Procedures](../twr/procedures) to accommodate for situations in which GMC is the only ATS unit online which can happen on the VATSIM Network.
+
+VFR departures may be initially cleared for 2 types of departure: **visual aerodrome circuit** or a **directional VFR departure**.
+
+//TBC
 
 ### Conditional Clearances
 
