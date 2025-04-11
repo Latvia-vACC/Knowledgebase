@@ -291,7 +291,7 @@ Unlike notifications requests for release require immediate action or some form 
 |    TWR    |                 A non-IFR aircraft is requesting a departure clearance                 |                                                       A relevant departure clearance                                                        | The aircraft remains on GMC frequency and GMC ATCO shall relay the clearance issued by TWR |
 |    APS    |            An IFR aircraft is requesting a non-standard departure clearance            |                                                       A relevant departure clearance                                                        | The aircraft remains on GMC frequency and GMC ATCO shall relay the clearance issued by APS |
 |    APS    |           An IFR aircraft is unable to follow a standard departure clearance           | A relevant departure clearance and/or instructions to mitigate the possible implications of the reported deviation from standard procedures |                                            NIL                                             |
-| TWR, APS  | An aircraft is requesting to depart from a runway other than the current runway-in-use |                                   Approval/Refusal of the request and any additional relevant instructions                                   |                                            NIL                                             |
+| TWR, APS  | An aircraft is requesting to depart from a runway other than the current runway-in-use |                                  Approval/Refusal of the request and any additional relevant instructions                                   |                                            NIL                                             |
 
 ## Advanced Procedures
 
@@ -317,11 +317,50 @@ A departure clearance must contain all of the following items in the given order
 3. Altitude restriction.
 4. SSR code.
 
+#### Rules for Issuing Departure Instructions
+
 Although the responsibility to issue non-IFR clearances does not lie with GMC, the following section is copied from the [TWR SOP – Procedures](../twr/procedures) to accommodate for situations in which GMC is the only ATS unit online which can happen on the VATSIM Network.
 
-VFR departures may be initially cleared for 2 types of departure: **visual aerodrome circuit** or a **directional VFR departure**.
+VFR departures may be initially cleared for 2 types of departure: **aerodrome visual circuit** or a **directional VFR departure**.
 
-//TBC
+##### Aerodrome Visual Circuit
+
+![Diagram depicting vertical and lateral restrictions for an aerodrome visual
+  circuit at RIX Riga Airport](../../../img/aerodrome_circuit_EVRA.png)
+
+<em>Source: Latvijas Gaisa Satiksme; AIP EVRA AD 2.20.16. Figure 1.</em>
+
+The diagram above describes the vertical and lateral for the aerodrome visual circuit at Rīga. Should a pilot request to follow a visual circuit as part of their departure clearance request, the following departure instructions shall be issued by default:
+
+1. `EASTBOUND` aerodrome visual circuit (left-hand circuit for RWY 18 and right-hand circuit for RWY 36).
+2. Altitude restriction `NOT BELOW 1500FT`.
+
+Should there be operational reasons (e.g. traffic flow) that impact the safety or practicality of assigning the aforementioned departure instructions, deviations from the default instructions are possible. Similarly, pilots' requests for non-standard departure instructions may be accommodated within reason.
+
+<Callout type="error" emoji="⚠️">
+  The altitude restriction within an aerodrome visual circuit **MUST NOT**
+  exceed 2500FT.
+</Callout>
+
+<Callout type="error" emoji="⚠️">
+  The distance between an aircraft in the aerodrome visual circuit and the
+  runway centerline **MUST NOT** exceed 3 NM while on downwind (flying parallel
+  to the runway centerline).
+</Callout>
+
+##### Directional VFR Departure
+
+Alternatively to following an aerodrome visual circuit, a pilot may request depart the airfield. A departure request must always contain the requested direction and/or requested exit point (VRP). Should a pilot request to depart the airfield, the following departure instructions shall be issued by default:
+
+1. Clearance to exit the controlled airspace including instructions how the exit shall be performed.
+2. Altitude restriction `AT OR BELOW 1500FT`.
+
+Should there be operational reasons (e.g. traffic flow) that impact the safety or practicality of assigning the aforementioned departure instructions, deviations from the default instructions are possible. Those deviations include, but are not limited to: issuing a clearance for an exit point other than the one that was requested, modifying the default altitude restriction, etc. Pilots' requests shall be accommodated within the bounds of operational safety and reason.
+
+<Callout type="error" emoji="⚠️">
+  The altitude restriction for exiting the controlled airspace **MUST NOT**
+  exceed 1500FT.
+</Callout>
 
 ### Conditional Clearances
 
