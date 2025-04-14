@@ -362,7 +362,23 @@ Should there be operational reasons (e.g. traffic flow) that impact the safety o
   exceed 1500FT.
 </Callout>
 
-### Conditional Clearances
+### Conditional Clearances and Give Way Instructions
+
+There are situations in which a clearance/instruction should be issued to a pilot, but there is some sort of temporary obstacle to the fulfilment of the clearance/instruction in question. In such cases conditional clearances come to rescue. Conditional clearances only differ from regular radio transmissions by them being prepended with a relevant condition. Conditional clearances are composed as follows:
+
+1. Conditional keyword [`after`/`once (clear of)`].
+2. Description of the obstacle (i.e. airline and aircraft type).
+3. Condition based on the current movement of the obstacle.
+4. The clearance itself.
+
+It is important to note that **conditional clearances forbid any action until the condition given is resolved**, therefore should a taxi instruction be issued as part of a conditional clearance, the aircraft in question will not be allowed to perform any ground movement/maneuvering and the taxi instruction will not go into effect until the condition is resolved.
+
+An alternative to conditional clearances specifically for taxi instructions is given provided by give way instructions. Unlike conditional clearances, give way instructions may be issued on their own or appended to regular taxi instructions. Give way instructions also do not delay the taxi instruction going into effect, they just limit the scope of it and simply instruct the pilot to give way to somebody else. Give way instructions are composed as follows:
+
+0. A regular taxi instruction (if applicable).
+1. The `give way to` key phrase.
+2. Description of the obstacle (i.e. airline and aircraft type).
+3. Description of the obstacle's movement.
 
 ### Helicopter Procedures
 
@@ -379,6 +395,35 @@ Helicopter movement at Rīga is regulated by Republic of Latvia AIP [EVRA AD 2.1
 
 ### Workload Management and Safety
 
+Safety is the top priority of any air traffic service. Pre-planning, consistency, and proper application of priority rules are the backbone of safe and efficient service. This section explains the mentioned concepts one by one.
+
+#### Pre-planning
+
+The process of pre-planning is crucial to maintaining safe and efficient operations. The process consists of 2 parts:
+
+- Determining the preliminary traffic sequence (i.e. planning the provisional order of aircraft with equal priority).
+- Considering the clearances and instructions that should be issued in the next 5 to 10 minutes.
+
+Obviously, deviations from the initial plan are possible and happen quite often in practice, though having a plan beforehand is always much safer than not having one. Finally, it is important to note that planning also requires spacing to be taken into account. As a rule of thumb, all traffic should be prevented from blocking other traffic as much as reasonably practicable, for example, not more than 2 aircraft should be in-waiting at intersection B in order to not block TWY F. Consideration of potential consequences must always be applied when sequencing traffic and issuing instructions!
+
+#### Consistency
+
+The general recommendation to help maintain consistently efficient operations is to apply the so-called "scan" technique. GMC ATCOs are expected to be on the lookout for the following things when scanning their AoR:
+
+- Departing traffic approaching the holding point (i.e. expected handoffs to TWR).
+- Arriving traffic vacating the runway (i.e. incoming handoffs from TWR).
+- Traffic following the instructions issued to them.
+- Traffic being in the queue for a clearance of any type.
+
+#### Application of Priority Rules
+
+GMC should apply the following priority rules to traffic within its AoR:
+
+- Transfer of control of departing traffic to TWR is the instruction with the highest priority.
+- Departing traffic shall be prioritised over arriving traffic on frequency, arriving traffic should be prioritised over departing traffic in terms of ground movement.
+- Aircraft which have started their engines have priority over those that have not done so.
+- Traffic following IFR always has priority over traffic following VFR or any other type of flight rule.
+
 ### Low Visibility Procedures
 
 Low Visibility Procedures shall be applied at Rīga in accordance with Republic of Latvia AIP [EVRA AD 2.22.4](https://ais.lgs.lv). The criteria for instantiating and cancelling LVP are as follows:
@@ -394,7 +439,7 @@ When LVP are effected, the following taxiways may be used to vacate the runway: 
 - taxiway A for runway 36 (or taxiway B if A is not available);
 - taxiway G for runway 18 (or taxiway E if G is not available).
 
-ONLY taxiways with centre line lights shall be used for taxiing. A list of such taxiways can be found in the Republic of Latvia AIP [EVRA AD 2.24.1 Aerodrome Chart](https://ais.lgs.lv). Otherwise, presence of a “follow me” vehicle is required.
+**Only taxiways with centre line lights shall be used for taxiing.** A list of such taxiways can be found in the Republic of Latvia AIP [EVRA AD 2.24.1 Aerodrome Chart](https://ais.lgs.lv). Otherwise, presence of a "follow me" vehicle is required.
 
 When LVP are in force, all taxiing aircraft shall resort to using Intermediate Holding Positions (IHP) equipped with yellow IHP lights. Such IHP are located on the following positions:
 
@@ -411,6 +456,31 @@ All aircraft taxiing to the runway-in-use shall be instructed to hold short of o
 
 ## VATSIM Specifics
 
+Although Latvia vACC strives to achieve maximum realism, there are still some specifics introduced by the VATSIM environment that must be taken into account.
+
 ### Communication Types
 
+VATSIM offers all pilots 3 types of communication. All aircraft in a given ATS unit's AoR must be provided service on an equal basis, regardless of their type of communication. The available types of communication are explained below:
+
+- VOICE (`/v` or blank space in EuroScope) – the pilot both receives voice instructions and speaks on frequency themselves;
+- RECEIVE (`/r` in EuroScope) – the pilot receives voice instructions, but speaks on frequency using text;
+- TEXT (`/t` in EuroScope) – the pilot receives instructions in text and speaks on frequency using text.
+
+It is generally recommended that text (`/t`) pilots receive instructions relevant to them a little earlier than other pilots normally would to provide ample time for the pilot to read the instruction back in text form.
+
 ### Use of Aliases and Commands
+
+A set of basic EuroScope commands is available in the [EuroScope Basic Guide](../../software-guides/euroscope/basics). This section will primarily focus on the available aliases.
+
+To better accommodate text (`/t`) pilots, the EVRR FIR Sector File has a list of aliases built in. Below is a non-exhaustive list of aliases that are most relevant to GMC:
+
+- `.clr` – issues an IFR clearance;
+- `.rc` – read back correct;
+- `.sq` – prompts the aircraft to set the correct squawk code;
+- `.ps` – pushback and start-up approved;
+- `.su` – start-up approved;
+- `.taxi36` or `.taxi18` – taxi instructions to the respective runway;
+- `.cont` – hands the aircraft off to the next ATS unit; the relevant EuroScope station ID shall be used in the blank spaces, the instruction will populate with relevant values after the `TAB` key is pressed;
+- `.v?` – asks the aircraft if they’re able to receive voice instructions.
+
+A full list of all aliases built into the EVRR FIR Sector File is available in the respective folder inside the sector file: `%sector_file_folder%/EVRR/Alias/alias.txt`.
