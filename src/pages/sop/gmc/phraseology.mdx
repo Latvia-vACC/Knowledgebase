@@ -9,6 +9,9 @@ import PhraseologyDisplay from "~/components/PhraseologyDisplay";
 
 For the purposes of this and all other phraseological examples in this Knowledgebase, IFR traffic will always be denoted with common airline callsigns, such as `BTI123` (Air Baltic 123) and VFR traffic will be denoted with registration-based callsigns, such as `YLKGB` (`YL-KGB`: Yankee, Lima, Kilo, Golf, Bravo).
 
+- `()` parentheses shall be used for optional parts of instructions that are to be used on a case by case basis.
+- `[]` square brackets shall be used for instances where a choice must be made by the station speaking on frequency. Different options will be separated with `/` forward slashes.
+
 ## Basic Phraseology
 
 ### Departure Clearances (IFR)
@@ -33,17 +36,188 @@ For the purposes of this and all other phraseological examples in this Knowledge
 Notes:
 
 - Should the requesting aircraft not report the current ATIS information and QNH or report either of them incorrectly, they should be provided that information as part of their IFR clearance as follows: `information A current, QNH 1013`
+- QNH values ≤ 1000 hPa shall be read as `QNH 993 hectopascals`, i.e. the word `hectopascals` must be appended to the QNH value.
 
 ### Pushback and Start-up Clearances
 
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, BTI123, stand 106, request pushback and start-up.`
+  </span>
+  <span>GMC: `BTI123, pushback and start-up approved.`</span>
+  <span>BTI123: `Pushback and start-up approved, BTI123.`</span>
+</PhraseologyDisplay>
+
+Notes:
+
+- Exceptions listed in the [Procedures section of the SOP](./procedures#pushback-and-start-up) may require straight pushback or no pushback at all. Clearances to those kinds of aircraft are issued as follows.
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, BTI123, stand 105, request pushback and start-up.`
+  </span>
+  <span>GMC: `BTI123, straight pushback and start-up approved.`</span>
+  <span>BTI123: `Straight pushback and start-up approved, BTI123.`</span>
+</PhraseologyDisplay>
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, BTI123, stand 108, request (pushback and) start-up.`
+  </span>
+  <span>GMC: `BTI123, (pushback is not required,) start-up approved.`</span>
+  <span>BTI123: `Start-up approved, BTI123.`</span>
+</PhraseologyDisplay>
+
 ### Taxi Instructions
 
+<PhraseologyDisplay>
+  <span>BTI123: `Riga Ground, BTI123, request taxi.`</span>
+  <span>
+    GMC: `BTI123, taxi to holding point, runway 36, via F and A, intersection B
+    is available.`
+  </span>
+  <span>
+    BTI123: `Taxi to holding point, runway 36, via F and A, and we will take
+    [B/the full length], BTI123.`
+  </span>
+</PhraseologyDisplay>
+
+Notes:
+
+- The runway intersection holding points **are not distinctively named**. `Holding point A` is **invalid and does not exist**; `holding point, runway 36` shall be used instead.
+- The current taxiway on which the aircraft is standing **MUST NOT** be mentioned in the taxi instruction unless it is taxiway F.
+- De-icing pads shall be referred to on frequency as `De-icing pad Delta [Sierra/November] [1/2/3/4]`.
+
 ### Transfer of Communications
+
+<PhraseologyDisplay>
+  <span>GMC: `BTI123, contact Riga Tower on 118.105.`</span>
+  <span>BTI123: `Contact Riga Tower on 118.105, BTI123.`</span>
+</PhraseologyDisplay>
+
+Notes:
+
+- In hight traffic volume situations `callsign only` may be appended to the end of the instruction at the receiving ATS unit's request.
 
 ## Advanced Phraseology
 
 ### Departure Clearances (VFR)
 
+It is important to remember that each request may differ, sometimes rather significantly. The pilot's request must be relayed to TWR as accurately as possible and as soon as possible.
+
+Notes:
+
+- Should the requesting aircraft not report the current ATIS information and QNH or report either of them incorrectly, they should be provided that information as part of their IFR clearance as follows: `information A current, QNH 1013`
+- QNH values ≤ 1000 hPa shall be read as `QNH 993 hectopascals`, i.e. the word `hectopascals` must be appended to the QNH value.
+
+#### Aerodrome Visual Circuit
+
+<PhraseologyDisplay>
+  <span>
+    YLKGB: `Riga Ground, good evening, YLKGB with information A on board, QNH
+    1013, Diamond DA-42 on stand 471, requesting visual circuits.`
+  </span>
+  <span>
+    GMC: `YLKGB, Riga Ground, good evening, information A is correct, stand by
+    for your clearance.`
+  </span>
+  <span className="text-center">
+    *GMC relays the request to TWR and receives the clearance.*
+  </span>
+  <span>GMC: `YLKGB, are you ready to copy your clearance?`</span>
+  <span>YLKGB: `Affirm, YLKGB.`</span>
+  <span>
+    GMC: `YLKGB, cleared for right-hand visual circuit, runway 36, not below
+    1500 FT, squawk 0060.`
+  </span>
+  <span>
+    YLKGB: `cleared for right-hand visual circuit, runway 36, not below 1500 FT,
+    squawk 0060, YLKGB.`
+  </span>
+  <span>GMC: `YLKGB, Your readback is correct(, start-up approved).`</span>
+</PhraseologyDisplay>
+
+#### Directional VFR Departure
+
+<PhraseologyDisplay>
+  <span>
+    YLKGB: `Riga Ground, good evening, YLKGB with information A on board, QNH
+    1013, Diamond DA-42 on stand 471, requesting VFR departure to the north,
+    requesting exit point KAGAL.`
+  </span>
+  <span>
+    GMC: `YLKGB, Riga Ground, good evening, information A is correct, stand by
+    for your clearance.`
+  </span>
+  <span className="text-center">
+    *GMC relays the request to TWR and receives the clearance.*
+  </span>
+  <span>GMC: `YLKGB, are you ready to copy your clearance?`</span>
+  <span>YLKGB: `Affirm, YLKGB.`</span>
+  <span>
+    GMC: `YLKGB, cleared VFR departure to the north, runway 36, expect to exit
+    the controlled airspace via KAGAL, remain at or below 1500 FT, squawk 0060.`
+  </span>
+  <span>
+    YLKGB: `cleared VFR departure to the north, runway 36, expect to exit the
+    controlled airspace via KAGAL, remain at or below 1500 FT, squawk 0060,
+    YLKGB.`
+  </span>
+  <span>GMC: `YLKGB, Your readback is correct(, start-up approved).`</span>
+</PhraseologyDisplay>
+
 ### Conditional Clearances and Give Way Instructions
 
+#### Examples of Conditional Clearances
+
+<PhraseologyDisplay>
+  <span>BTI123: `Riga Ground, BTI123, request taxi.`</span>
+  <span>
+    GMC: `BTI123, after company Airbus A220-300 passes left to right on TWY F,
+    taxi to holding point, runway 36, via F and A, intersection B is available.`
+  </span>
+  <span>
+    BTI123: `After company Airbus A220-300 passes left to right on TWY F, taxi
+    to holding point, runway 36, via F and A, and we will take [B/the full
+    length], BTI123.`
+  </span>
+</PhraseologyDisplay>
+
+Notes:
+
+- The keyword `company` as part of a conditional clearance means the ATCO is referring to an aircraft of the same airline as the recipient of the instruction, in the case above: Air Baltic.
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, BTI123, stand 106, request pushback and start-up.`
+  </span>
+  <span>
+    GMC: `BTI123, once clear of RYR Boeing 737-800 passing right to left on TWY
+    T, pushback and start-up approved.`
+  </span>
+  <span>
+    BTI123: `Once clear of RYR Boeing 737-800 passing right to left on TWY T,
+    pushback and start-up approved, BTI123.`
+  </span>
+</PhraseologyDisplay>
+
+#### Examples of Give Way Instructions
+
+<PhraseologyDisplay>
+  <span>
+    GMC: `BTI123, give way to the RYR Boeing 737-800 passing right to left on
+    TWY F.`
+  </span>
+  <span>
+    BTI123: `Give way to the RYR Boeing 737-800 passing right to left on TWY F,
+    BTI123.`
+  </span>
+</PhraseologyDisplay>
+
 ### Workload Management and Safety
+
+- In case a communication to a given aircraft does not require readback, the next instruction to a different aircraft may be chained using the phrase `break-break`.
+- In case when there is a queue of traffic forming on frequency, it is advisable to issue sequence numbers to traffic waiting, i.e.: `BTI123, stand by, number 2 for clearance.`
+- Should the callsign of a given aircraft be not known for any reason, they may be referred to on frequency as `station`, i.e.:
+  - `Last station calling, say [callsign only/again].` – prompts the last station that called on frequency to identify themselves.
+  - `Station calling for [clearance/pushback/etc.], say [callsign only/again].` – prompts a particular station to identify themselves. Such an instruction is useful in cases when 2 or more pilots "step" onto each other on frequency thus blocking each other's radio transmissions.
