@@ -25,7 +25,7 @@ const Logo = () => {
         }
         alt="Latvia vACC"
         width="192"
-        className="min-w-[192px]"
+        className="sm:min-w-[192px]"
       />
       <span className="sr-only">Home - Latvia vACC Knowledgebase</span>
     </>
@@ -71,7 +71,7 @@ const themeConfig = {
     ),
   },
   banner: {
-    key: "not-real",
+    key: "vatsim",
     content: (
       <span className="h-fit overflow-visible whitespace-normal text-wrap">
         ❗ Attention! Latvia vACC is a part of the VATSIM Network. No resources,

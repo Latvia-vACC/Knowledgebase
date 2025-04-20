@@ -20,3 +20,7 @@
 .underline:has(> .remove-parent-underline) {
   @apply no-underline;
 }
+
+.nextra-banner-container {
+  @apply h-fit;
+}
