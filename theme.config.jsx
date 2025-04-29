@@ -27,7 +27,7 @@ const Logo = () => {
         width="192"
         className="sm:min-w-[192px]"
       />
-      <span className="sr-only">Home - Latvia vACC Knowledgebase</span>
+      <span className="sr-only">Home – Latvia vACC Knowledgebase</span>
     </>
   );
 };
@@ -110,7 +110,7 @@ const themeConfig = {
         <title>
           {asPath === "/"
             ? frontMatter.title
-            : `${frontMatter.title} - Latvia vACC Knowledgebase`}
+            : `${frontMatter.title} – Latvia vACC Knowledgebase`}
         </title>
         <meta property="description" content={frontMatter.description} />
         <meta name="theme-color" content="#9d2235" />
