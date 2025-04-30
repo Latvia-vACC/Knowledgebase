@@ -3,6 +3,8 @@ title: TWR SOP – Procedures
 description: This page describes the relevant procedures for Tower Control in EVRR FIR.
 ---
 
+import { Callout } from "nextra/components";
+
 # TWR SOP – Procedures
 
 ## Basic Procedures
@@ -75,7 +77,46 @@ The preferential runway system is applied as follows (time given in Rīga local 
 
 ### Runway Operations – Departures
 
+#### Takeoff Clearances
+
+Departing aircraft approaching the runway-in-use shall be issued a takeoff clearance as soon as reasonably practicable. For a takeoff clearance to be issued, all of the following conditions must be met:
+
+- the departing aircraft's crew are ready for departure;
+- the runway is clear and there is no traffic overflying the runway below 2500FT AMSL;
+- preceding departing traffic (if any) must have crossed the reciprocal runway threshold and/or started a turn and left the runway track;
+- preceding arriving traffic (if any) must have vacated the runway and crossed the runway holding point in full;
+- succeeding arriving traffic (if any) must not be closer than 5 NM DME from the runway-in-use threshold.
+
+Generally, an assumption is made that aircraft approaching the runway holding point are ready for departure unless the crew explicitly notifies ATC otherwise.
+
+A takeoff clearance must contain all of the following items in the order given.
+
+1. Current runway surface wind.
+2. The runway for which the clearance is issued.
+3. The phrase "cleared for takeoff".
+4. A symbolic reminder about the automatic handoff procedure, such as "bye-bye". A further explanation for this item is provided in [the next section of this SOP](#transfer-of-control-and-communications-departures).
+
+<Callout type="error" emoji="⚠️">
+  The word "**takeoff**" is defined as a permanent keyword. It must be used
+  exclusively in takeoff clearances and never in any other
+  clearances/instructions.
+</Callout>
+
+#### Transfer of Control and Communications (Departures)
+
+RIX Riga Airport employs an automatic handoff procedure for IFR departures. All IFR departures are expected to contact Riga Approach on frequency 129.925 MHz before passing 1500FT AMSL or as soon as reasonably practicable.
+
+As part of an ongoing effort to enforce the application of this procedure on the VATSIM Network, pilots are always symbolically reminded about it in their takeoff clearance by use of the phrase "bye-bye" or a suitable alternative. In situations when the B sector of Riga TMA is staffed as a separate ATS unit or the departure frequency is not 129.925 MHz for any other reason, the symbolic reminder shall be replaced with a "when airborne, contact" clause.
+
+For all IFR departures, Riga Tower relinquishes authority, yet retains control the moment a takeoff clearance is read back. Transfer of control and transfer of communications of IFR departures happens simultaneously once the crew switches their radios th the departure frequency.
+
+The automatic handoff procedure does not apply to VFR departures. For further details see the [VFR Procedures](#vfr-procedures) section.
+
 ### Runway Operations – Arrivals
+
+#### Landing Clearances
+
+#### Transfer of Control and Communications (Arrivals)
 
 ### VFR Procedures
 
