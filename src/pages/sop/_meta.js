@@ -12,9 +12,9 @@ const contents = {
 
   gmc: "GMC",
   twr: "TWR",
-  aps: "APS",
-  acs: "ACS",
-  fis: "AFIS/FIS",
+  aps: { title: "APS", display: "hidden" },
+  acs: { title: "ACS", display: "hidden" },
+  fis: { title: "AFIS/FIS", display: "hidden" },
 };
 
 export default contents;

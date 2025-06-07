@@ -13,7 +13,10 @@ export default function App({ Component, pageProps }) {
   const [show, setShow] = useState(!env.NEXT_PUBLIC_PROTECTED);
 
   useEffect(() => {
-    if (window.localStorage.getItem("secret") === env.NEXT_PUBLIC_PASSWORD)
+    if (
+      !show &&
+      window.localStorage.getItem("secret") === env.NEXT_PUBLIC_PASSWORD
+    )
       setShow(true);
   }, []);
 

@@ -57,17 +57,55 @@ const themeConfig = {
   },
   footer: {
     content: (
-      <span>
-        Apache License 2.0 ©{" "}
-        <Link
-          href="https://lv-vacc.org"
-          target="_blank"
-          className="text-latvia-carmine underline"
-        >
-          Latvia vACC
-        </Link>{" "}
-        2006-{new Date().getFullYear()}
-      </span>
+      <div className="flex w-full gap-20">
+        <div className="flex flex-col gap-1 tracking-wide">
+          <h4 className="font-bold">vACC Resources</h4>
+          <Link
+            href="https://lv-vacc.org"
+            target="_blank"
+            className="tracking-wide transition-opacity hover:opacity-80"
+          >
+            Home Page
+          </Link>
+          <Link
+            href="https://training.lv-vacc.org"
+            target="_blank"
+            className="tracking-wide transition-opacity hover:opacity-80"
+          >
+            OneTest ✅
+          </Link>
+        </div>
+        <div className="flex flex-col gap-1 tracking-wide">
+          <h4 className="font-bold">Contact</h4>
+          <Link
+            href="https://lv-vacc.org/contact"
+            target="_blank"
+            className="tracking-wide transition-opacity hover:opacity-80"
+          >
+            vACC Staff
+          </Link>
+          <Link
+            href="mailto:tech@lv-vacc.org"
+            target="_blank"
+            className="tracking-wide transition-opacity hover:opacity-80"
+          >
+            Tech Department
+          </Link>
+          <Link
+            href="mailto:atd@lv-vacc.org"
+            target="_blank"
+            className="tracking-wide transition-opacity hover:opacity-80"
+          >
+            ATC Training Department
+          </Link>
+        </div>
+        <span>
+          Apache License 2.0
+          <br />© <span className="text-latvia-carmine">Latvia vACC</span>{" "}
+          2006-
+          {new Date().getFullYear()}
+        </span>
+      </div>
     ),
   },
   banner: {

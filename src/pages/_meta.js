@@ -31,18 +31,18 @@ const contents = {
         title: "TWR",
         href: "/sop/twr/general",
       },
-      {
-        title: "APS",
-        href: "/sop/aps/general",
-      },
-      {
-        title: "ACS",
-        href: "/sop/acs/general",
-      },
-      {
-        title: "AFIS/FIS",
-        href: "/sop/fis/general",
-      },
+      // {
+      //   title: "APS",
+      //   href: "/sop/aps/general",
+      // },
+      // {
+      //   title: "ACS",
+      //   href: "/sop/acs/general",
+      // },
+      // {
+      //   title: "AFIS/FIS",
+      //   href: "/sop/fis/general",
+      // },
     ],
   },
   "external-resources": {
