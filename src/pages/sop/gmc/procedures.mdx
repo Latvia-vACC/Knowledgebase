@@ -195,7 +195,7 @@ Arriving aircraft should be directed to taxi to a designated stand. In most case
 |      101       |                                                 Schengen ONLY                                                 |        Max. wingspan 29 m        |                                            NIL                                            |
 |      103       |                                                 Schengen ONLY                                                 |        Max. wingspan 30 m        |                                            NIL                                            |
 | 102, 104 – 109 |                                                 Schengen ONLY                                                 |        Max. wingspan 36 m        |                                            NIL                                            |
-|      110       |                                                      NIL                                                      |        Max. wingspan 36 m        |                              Stand next to the VIP terminal                               |
+|    110, 111    |                                                      NIL                                                      |        Max. wingspan 36 m        |                              Stand next to the VIP terminal                               |
 |    112, 113    |                                                      NIL                                                      |        Max. wingspan 36 m        |                        Block stand 100, and stands 112 through 115                        |
 |      114       |                                                      NIL                                                      |        Max. wingspan 52 m        |                       Blocks stand 100, and stands 112 through 115                        |
 |      115       |                                                      NIL                                                      |        Max. wingspan 42 m        |                       Blocks stand 100, and stands 112 through 115                        |
@@ -318,6 +318,8 @@ A departure clearance must contain all of the following items in the given order
 
 Although the responsibility to issue non-IFR clearances does not lie with GMC, the following section is copied from the [TWR SOP – Procedures](../twr/procedures) to accommodate for situations in which GMC is the only ATS unit online which can happen on the VATSIM Network.
 
+VFR operations may only be conducted if the cloud ceiling is at or above 1500FT and RVR is ≥ 6000 meters.
+
 VFR departures may be initially cleared for 2 types of departure: **aerodrome visual circuit** or a **directional VFR departure**.
 
 ##### Aerodrome Visual Circuit
@@ -327,7 +329,7 @@ VFR departures may be initially cleared for 2 types of departure: **aerodrome vi
 
 <em>Source: Latvijas Gaisa Satiksme; AIP EVRA AD 2.20.16. Figure 1.</em>
 
-The diagram above describes the vertical and lateral for the aerodrome visual circuit at Rīga. Should a pilot request to follow a visual circuit as part of their departure clearance request, the following departure instructions shall be issued by default:
+The diagram above describes the vertical and lateral limits for the aerodrome visual circuit at Rīga. Should a pilot request to follow a visual circuit as part of their departure clearance request, the following departure instructions shall be issued by default:
 
 1. `EASTBOUND` aerodrome visual circuit (left-hand circuit for RWY 18 and right-hand circuit for RWY 36).
 2. Altitude restriction `NOT BELOW 1500FT`.
@@ -349,7 +351,7 @@ Should there be operational reasons (e.g. traffic flow) that impact the safety o
 
 Alternatively to following an aerodrome visual circuit, a pilot may request depart the airfield. A departure request must always contain the requested direction and/or requested exit point (VRP). Should a pilot request to depart the airfield, the following departure instructions shall be issued by default:
 
-1. Clearance to exit the controlled airspace including instructions how the exit shall be performed.
+1. Clearance to exit the controlled airspace including instructions how the exit shall be performed. Said instructions must contain a valid exit point in the form of a VRP.
 2. Altitude restriction `AT OR BELOW 1500FT`.
 
 Should there be operational reasons (e.g. traffic flow) that impact the safety or practicality of assigning the aforementioned departure instructions, deviations from the default instructions are possible. Those deviations include, but are not limited to: issuing a clearance for an exit point other than the one that was requested, modifying the default altitude restriction, etc. Pilots' requests shall be accommodated within the bounds of operational safety and reason.
