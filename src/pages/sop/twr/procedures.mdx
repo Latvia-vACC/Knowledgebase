@@ -37,6 +37,8 @@ Riga CTR also contains non-permanent danger areas. Pilots are expected to avoid 
 | EVD1 BALOZI |    SFC-400FT    |                             Danger area. Active from local SR to SS due to UAV flights.                              |
 | EVD2 KRASTA |    SFC-600FT    | Danger area. Active 01 APR till 30 NOV from local SR to SS due to non-radio equipped powered hang glider activities. |
 
+Although birds are not simulated on the VATSIM Network, information about their migration is available in Republic of Latvia AIP [EVRA AD 2.23.1](https://ais.lgs.lv). Bird migration may affect runway operations from March to May and from August to October. Notice of bird activity in the vicinity of the aerodrome is included in the ATIS from 01 MAY until 30 SEP.
+
 ### Combined GMC Operations
 
 It is often the case that the traffic load on RIX Riga Airport is light enough not to warrant a separate GMC ATS unit. In such circumstances GMC operations shall be combined with TWR as a single ATS unit and the following message shall be included in the ATIS:
@@ -149,7 +151,7 @@ In theory there is an automatic handoff procedure in place for all arrivals just
 
 ### VFR Procedures
 
-VFR operations may only be conducted if the cloud ceiling is at or above 1500FT and RVR is ≥ 6000 meters.
+VFR operations may only be conducted if the cloud ceiling is at or above 1500FT and RVR is ≥ 4000 meters.
 
 #### Departure Clearances
 
@@ -184,10 +186,10 @@ Should there be operational reasons (e.g. traffic flow) that impact the safety o
 
 Alternatively to following an aerodrome visual circuit, a pilot may request depart the airfield. A departure request must always contain the requested direction and/or requested exit point (VRP). Should a pilot request to depart the airfield, the following departure instructions shall be issued by default:
 
-1. Clearance to exit the controlled airspace including instructions how the exit shall be performed. Said instructions must contain a valid exit point in the form of a VRP.
+1. Clearance to exit the controlled airspace including instructions on how the exit shall be performed. Said instructions must contain a valid exit point in the form of a VRP.
 2. Altitude restriction `AT OR BELOW 1500FT`.
 
-Should there be operational reasons (e.g. traffic flow) that impact the safety or practicality of assigning the aforementioned departure instructions, deviations from the default instructions are possible. Those deviations include, but are not limited to: issuing a clearance for an exit point other than the one that was requested, modifying the default altitude restriction, etc. Pilots' requests shall be accommodated within the bounds of operational safety and reason.
+Should there be operational reasons (e.g. traffic flow) that impact the safety or practicality of assigning the aforementioned departure instructions, deviations from the default instructions are possible. Those deviations include, but are not limited to issuing a clearance for an exit point other than the one that was requested, modifying the default altitude restriction, etc. Pilots' requests shall be accommodated within the bounds of operational safety and reason.
 
 <Callout type="error" emoji="⚠️">
   The altitude restriction for exiting the controlled airspace **MUST NOT**
@@ -196,15 +198,23 @@ Should there be operational reasons (e.g. traffic flow) that impact the safety o
 
 #### Takeoff Clearances
 
-Takeoff clearances for VFR departures are issued in the same way as for IFR departures, however, instead of the expectation for the departing aircraft's crew to change their frequency after departure, VFR departures remain on TWR frequency and shall be instructed to 'report airborne' as part of their takeoff clearance.
+Takeoff clearances for VFR departures are issued in the same way as for IFR departures, however, instead of the expectation for the departing aircraft's crew to change their frequency after departure, VFR departures remain on TWR frequency and shall be instructed to "report airborne" as part of their takeoff clearance.
 
 #### Interaction with Airborne Traffic
 
-Airborne traffic, whether in a visual circuit, or otherwise within Riga is required to continuously report their position to ATC. All aircraft in a visual circuit must be instructed to report reaching the downwind leg of their circuit and regularly update ATC on their intentions. Depending on on the traffic situation, reporting of reaching the final leg of the circuit can also be required. Traffic present in Riga CTR for executing procedures other than a visual circuit (entry, exit, transit) shall report passing of VRPs on lateral borders of Riga CTR as well as overflight of or visual contact with any visual reference requested by ATC.
+Airborne traffic, whether in a visual circuit or otherwise within Riga CTR is required to continuously report their position to ATC. All aircraft in a visual circuit must be instructed to report reaching the downwind leg of their circuit and regularly update ATC on their intentions. Depending on on the traffic situation, reporting of reaching the final leg of the circuit can also be required. Traffic present in Riga CTR for executing procedures other than a visual circuit (entry, exit, transit) shall report passing of VRPs on lateral borders of Riga CTR as well as overflight of or visual contact with any visual reference requested by ATC.
 
 ATCOs are expected to maintain current information on the intentions of all traffic in their AoR. Currency of intentions can be established by prompting a given aircraft's crew to report them. Should it be required by safety or other operational reasons, Rīga Tower shall enforce non-interference of VFR traffic into the operations of higher priority traffic by issuing holding instructions (orbiting instructions over a given point) or extending a given aircraft's downwind leg of the visual circuit.
 
 In class C and D airspaces (the only classes of controlled airspace present in EVRR FIR) ATC does not provide radar separation to VFR traffic. In place of radar separation VFR traffic is provided Flight Information Services (FIS) by their current ATS unit. FIS includes but is not limited to provision of current and accurate weather information and traffic information. Traffic information must be provided to aircraft under FIS in cases when lateral separation between 2 or more aircraft reduces below 5 NM and vertical separation reduces below 1500FT. If workload permits, traffic information should be provided both ways (i.e. to the aircraft under FIS and to the other traffic regardless of flight rule and other conditions). In cases when both aircraft concerned with traffic information are under FIS, traffic information must be provided to both aircraft.
+
+As part of traffic information, the following information must be provided:
+
+1. Airline and aircraft type.
+2. A clockwise direction.
+3. Indicated altitude.
+
+An approximate distance may also be provided as an assistive measure.
 
 #### Crossing the Lateral Boundary of Riga CTR
 
@@ -224,7 +234,28 @@ Any traffic exiting Riga CTR must do so via a valid exit point (VRP). Upon overf
 
 ##### Transit of Riga CTR
 
+A transit of the controlled airspace is a combination of entry and exit procedures. As part of a transit clearance, the following items must be provided in the order given.
+
+1. The phrase "cleared to transit the controlled airspace".
+2. A valid entry point (VRP).
+3. A valid routing (must consist of visually identifiable elements, e.g. VRPs).
+4. A valid exit point (VRP).
+5. An altitude restriction and current QNH.
+
+All aircraft transiting the controlled airspace must report overflight of their assigned entry and exit points. Additional reporting requirements may be imposed by Rīga Tower in cases of operational necessity.
+
+An aircraft may transit the controlled airspace by either following the published North Transit Route or by requesting a custom routing. The North Transit Route is a published routing that exists between MAORI VRP (Majori neighbourhood in Jūrmala) and KAGAL VRP following the coast; all aircraft following the North Transit Route must be issued the altitude restriction to remain `AT OR BELOW 500FT`; aircraft following the North Transit Route **are not** a factor to either departing or arriving traffic and **do not** inhibit runway operations ar RIX Riga Airport.
+
+Aircraft requesting custom transit routings shall make their request to Rīga Tower. Rīga Tower shall grant transit requests depending on the current traffic flow and operational capacity, but reserves the right to modify or replace the requested custom routing. Rīga Tower is expected to exercise caution and avoid causing delays in runway operations; should the aircraft's requested routing be unavailable for any reason, they can be assigned a different routing or instructed to hold over any holding point or VRP until their requested routing becomes available. If an aircraft waiting for their requested routing to become available is instructed to hold over a holding point or VRP inside the controlled airspace, a transit clearance must be issued with the holding instruction appended to it.
+
+<Callout type="error" emoji="⚠️">
+  Any aircraft overflying the runway at or below 2500FT AMSL inhibits any and
+  all runway operations.
+</Callout>
+
 #### Inbound Runway Operations
+
+Besides a full stop landing inbound traffic can also request a touch-and-go as well as a low pass. There is no practical difference between these actions for ATC besides a small phraseological change. Instead of the phrase "cleared to land", "cleared for touch-and-go" and "cleared for low pass" shall be used. Aircraft performing a touch-and-go shall be instructed to report airborne; aircraft performing a low pass shall be instructed to report overflight of reciprocal runway threshold.
 
 ### Helicopter Procedures
 
@@ -241,18 +272,49 @@ Helicopter movement at Rīga is regulated by Republic of Latvia AIP [EVRA AD 2.1
 
 ### Coordination
 
+The following coordination is required at all times between Rīga Tower and neighbouring ATS units.
+
 #### Notifications
 
+| Recipient |                             Condition                              |           Remarks            |
+| :-------: | :----------------------------------------------------------------: | :--------------------------: |
+|    GMC    |                 A rejected takeoff (RTO) occurred                  |             NIL              |
+|    APS    |               Any type of non-standard IFR departure               | Including J SIDs from RWY 36 |
+|    APS    |           A missed approach procedure has been initiated           | Reason must be communicated  |
+|    APS    | Insufficient arrival spacing to accommodate current departure flow |             NIL              |
+
 #### Requests for Release
+
+| Recipient |                                     Condition                                     |                                  Expected Response                                   | Remarks |
+| :-------: | :-------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------: | :-----: |
+|    APS    | An aircraft is ready to depart from a runway other than the current runway-in-use | Approval of the request (or expected delay) and any additional relevant instructions |   NIL   |
 
 ## Advanced Procedures
 
 ### Low Visibility Procedures and CAT II Approaches
 
+When LVP are effected the following restrictions apply:
+
+- Runway 18/36 is only approved for manoeuvres when RVR is greater or equal to 250 meters. This means that with RVR less than 250 meters, no runway operations may be authorised, and traffic movement shall be halted until visibility conditions improve.
+- In order to maintain protection of the ILS, no vehicle or aircraft shall penetrate/infringe ILS critical and sensitive areas. In order to fulfil this requirement, more than 8 NM spacing between arrivals will be used.
+
+CAT II approaches (both simulated and during real LVP) make no difference for Rīga Tower operations, however, 8 NM arrival spacing must be observed. Runway 18/36 is equipped with CAT II holding points at taxiways A, B, E, and G. A and G should be prioritised; B and/or E should only be used when A and/or G are not available.
+
+Further reading on LVP and CAT II approaches, see Republic of Latvia AIP [EVRA AD 2.22.3 and 2.22.4](https://ais.lgs.lv).
+
 ### Approach Types
+
+| Approach Type | Relevant frequency, inbound track, glide path slope, final length                                                                                                  |                                      Remarks                                      |
+| :-----------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------: |
+|  ILS Y/LOC Y  | **RWY 36**: 108.100 MHz / 355° / GP 3.0° / 10 NM (6.5 NM for short approach)<br/><br/>**RWY 18**: 111.100 MHz / 175° / GP 3.0° / 10 NM (6.5 NM for short approach) |                     Default type of approach, RNAV 1 required                     |
+|  ILS Z/LOC Z  | **RWY 36**: 108.100 MHz / 355° / GP 3.0° / 10 NM (6.5 NM for short approach)<br/><br/>**RWY 18**: 111.100 MHz / 175° / GP 3.0° / 10 NM (6.5 NM for short approach) |                  Intended for aircraft not equipped with RNAV 1                   |
+| RNAV (RNP) Y  | **RWY 36**: NIL / 355° / GP 3.0° / 10 NM (6.5 NM for short approach)<br/><br/>**RWY 18**: NIL / 175° / GP 3.0° / 10 NM (6.5 NM for short approach)                 |                                  RNAV 1 required                                  |
+| RNAV (RNP) Z  | **RWY 36**: NIL / 355° / GP 3.0° / 3.2 NM<br/><br/>**RWY 18**: NIL / 175° / GP 3.0° / 2.9 NM                                                                       |                          Special authorisation required                           |
+|      VOR      | **RWY 36**: RIA DVOR 114.000 MHz / 351° / GP 2.98° / 11.9 NM<br/><br/>**RWY 18**: RIA DVOR 114.000 MHz / 179° / GP 2.98° / 12 NM                                   |            Full racetrack procedure and straight in approach available            |
+|    Visual     | **RWY 36**: NIL / NIL / NIL / 6.5 NM<br/><br/>**RWY 18**: NIL / NIL / NIL / 6.5 NM                                                                                 | May only be used if cloud ceiling is at or above 1500FT and RVR is ≥ 4000 meters. |
 
 ### Separation and Sequencing
 
-### Reduced Runway Sepearation Minima
+### Reduced Runway Separation Minima
 
 ### Workload Management and Safety
