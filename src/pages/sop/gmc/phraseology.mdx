@@ -31,13 +31,82 @@ For the purposes of this and all other phraseological examples in this Knowledge
     BTI123: `Cleared to Stockholm-Arlanda via the LAPSA2H departure, squawk
     4341, BTI123.`
   </span>
-  <span>GMC: `BTI123, Your readback is correct.`</span>
+  <span>GMC: `BTI123, your readback is correct.`</span>
 </PhraseologyDisplay>
 
 Notes:
 
 - Should the requesting aircraft not report the current ATIS information and QNH or report either of them incorrectly, they should be provided that information as part of their IFR clearance as follows: `information A current, QNH 1013`
 - QNH values ≤ 1000 hPa shall be read as `QNH 993 hectopascals`, i.e. the word `hectopascals` must be appended to the QNH value.
+- Phraseology for correcting flight plan inaccuracies is not set in stone, though recommended examples are presented below.
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, good evening, BTI123 with information A on board, QNH
+    1013, Airbus A220-300 on stand 106, requesting IFR clearance to
+    Stockholm-Arlanda.`
+  </span>
+  <span>
+    GMC: `BTI123, Riga Ground, I do not see a flight plan filed under your
+    callsign, please file a flight plan.`
+  </span>
+  <span>BTI123: `Roger, BTI123.`</span>
+</PhraseologyDisplay>
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, good evening, BTI123 with information A on board, QNH
+    1013, Airbus A220-300 on stand 106, requesting IFR clearance to
+    Stockholm-Arlanda.`
+  </span>
+  <span>
+    GMC: `BTI123, Riga Ground, good evening, your requested flight level is
+    invalid for your direction of flight, would you like FL320 or FL340?`
+  </span>
+  <span>BTI123: `FL320, BTI123.`</span>
+  <span>
+    GMC: `BTI123, (flight plan amended, )final FL320, report ready to copy IFR
+    clearance.`
+  </span>
+</PhraseologyDisplay>
+
+In cases when the filed flight plan cannot be deemed valid due to the lack of a critical flight plan item (aircraft type, route, etc.) the violating aircraft shall be prompted to refile the flight plan unless it can be corrected by altering the route. Recommended phraseology for both cases is shown below.
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, good evening, BTI123 with information A on board, QNH
+    1013, Airbus A220-300 on stand 106, requesting IFR clearance to
+    Stockholm-Arlanda.`
+  </span>
+  <span>
+    GMC: `BTI123, Riga Ground, good evening, your filed flight plan is invalid(,{" "}
+    {REASON}). Please refile.`
+  </span>
+  <span>BTI123: `Roger, BTI123.`</span>
+</PhraseologyDisplay>
+
+<PhraseologyDisplay>
+  <span>
+    BTI123: `Riga Ground, good evening, BTI123 with information A on board, QNH
+    1013, Airbus A220-300 on stand 106, requesting IFR clearance to
+    Stockholm-Arlanda.`
+  </span>
+  <span>
+    GMC: `BTI123, Riga Ground, good evening, your filed flight plan is invalid,
+    an alternative routing is available. Report ready to copy.`
+  </span>
+  <span>BTI123: `Ready to copy, BTI123.`</span>
+  <span>
+    GMC: `BTI123, information A is correct, cleared to Stockholm-Arlanda via the
+    LAPSA2H departure, then DCT RASEL, after RASEL continue as filed, squawk
+    4341.`
+  </span>
+  <span>
+    BTI123: `Cleared to Stockholm-Arlanda via the LAPSA2H departure, DCT RASEL,
+    continue as filed, squawk 4341, BTI123.`
+  </span>
+  <span>GMC: `BTI123, your readback is correct.`</span>
+</PhraseologyDisplay>
 
 ### Pushback and Start-up Clearances
 

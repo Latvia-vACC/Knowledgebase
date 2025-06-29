@@ -1,0 +1,229 @@
+---
+title: ATS Units in EVRR FIR
+description: This page contains tables listing all ATS units in EVRR FIR.
+---
+
+import { Table, Tr, Th, Td } from "nextra/components";
+
+# ATS Units in EVRR FIR
+
+This page contains tables listing all ATS units in EVRR FIR.
+
+Notes:
+
+- Frequencies in parentheses `()` are to be used by non 8.33kHz-equipped aircraft.
+
+## Non-Radar ATS Units
+
+<Table>
+  <thead className="[&>tr>th]:text-center">
+    <Tr>
+      <Th>Designation</Th>
+      <Th>Callsign</Th>
+      <Th>Frequency (MHz)</Th>
+      <Th>AoR</Th>
+      <Th>Vertical Limits</Th>
+      <Th>Airspace Class</Th>
+      <Th>Remarks</Th>
+    </Tr>
+  </thead>
+  <tbody className="[&>tr>td]:text-center">
+    <Tr>
+      <Td>EVRA GMC</Td>
+      <Td>Rīga Ground (EVRA_GND)</Td>
+      <Td>118.805 (118.800)</Td>
+      <Td>RIX Riga Airport</Td>
+      <Td colSpan={3}>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRA ADC</Td>
+      <Td>Rīga Tower (EVRA_TWR)</Td>
+      <Td>118.105 (118.100)</Td>
+      <Td>Riga CTR</Td>
+      <Td>SFC-2500FT</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVGA ADC</Td>
+      <Td>Lielvārde Tower (EVGA_TWR)</Td>
+      <Td>118.155 (118.150)</Td>
+      <Td>Lielvarde CTR</Td>
+      <Td>SFC-4000FT</Td>
+      <Td>D</Td>
+      <Td>Military Airfield</Td>
+    </Tr>
+  </tbody>
+</Table>
+
+## Radar ATS Units
+
+<Table>
+  <thead className="[&>tr>th]:text-center">
+    <Tr>
+      <Th>Designation</Th>
+      <Th>Callsign</Th>
+      <Th>Frequency (MHz)</Th>
+      <Th>AoR</Th>
+      <Th>Vertical Limits</Th>
+      <Th>Airspace Class</Th>
+      <Th>Remarks</Th>
+    </Tr>
+  </thead>
+  <tbody className="[&>tr>td]:text-center">
+    <Tr>
+      <Td>EVRA APS</Td>
+      <Td>Rīga Approach (EVRA_APP)</Td>
+      <Td>129.925</Td>
+      <Td>Riga TMA (Sectors A, B, C)</Td>
+      <Td>1500FT-FL285</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRA APS</Td>
+      <Td>Rīga Approach (EVRA_B_APP)</Td>
+      <Td>134.850</Td>
+      <Td>Riga TMA (Sector B)</Td>
+      <Td>1500FT-FL095</Td>
+      <Td>C</Td>
+      <Td>Open only during high intensity operations</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR ACS</Td>
+      <Td>Rīga Control (EVRR_CTR)</Td>
+      <Td>135.100</Td>
+      <Td>Riga CTA (Sector Bandbox)</Td>
+      <Td>FL095-FL660</Td>
+      <Td>C</Td>
+      <Td>Primary Rīga Control Frequency</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR ACS</Td>
+      <Td>Rīga Control (EVRR_N_CTR)</Td>
+      <Td>135.100</Td>
+      <Td>Riga CTA AoR NORTH</Td>
+      <Td>FL095-FL660</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR ACS</Td>
+      <Td>Rīga Control (EVRR_E_CTR)</Td>
+      <Td>133.200</Td>
+      <Td>Riga CTA AoR EAST</Td>
+      <Td>FL095-FL660</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR ACS</Td>
+      <Td>Rīga Control (EVRR_S_CTR)</Td>
+      <Td>134.750</Td>
+      <Td>Riga CTA AoR SOUTH</Td>
+      <Td>FL095-FL660</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR ACS</Td>
+      <Td>Rīga Control (EVRR_W_CTR)</Td>
+      <Td>134.125</Td>
+      <Td>Riga CTA AoR NORTH and SOUTH</Td>
+      <Td>FL095-FL660</Td>
+      <Td>C</Td>
+      <Td>NIL</Td>
+    </Tr>
+  </tbody>
+</Table>
+
+## FIS ATS Units
+
+<Table>
+  <thead className="[&>tr>th]:text-center">
+    <Tr>
+      <Th>Designation</Th>
+      <Th>Callsign</Th>
+      <Th>Frequency (MHz)</Th>
+      <Th>AoR</Th>
+      <Th>Vertical Limits</Th>
+      <Th>Airspace Class</Th>
+      <Th>Remarks</Th>
+    </Tr>
+  </thead>
+  <tbody className="[&>tr>td]:text-center">
+    <Tr>
+      <Td>EVLA AFIS</Td>
+      <Td>Liepāja Information (EVLA_I_TWR)</Td>
+      <Td>129.400</Td>
+      <Td>Liepaja FIZ</Td>
+      <Td>SFC-FL095</Td>
+      <Td>G</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVRR FIS</Td>
+      <Td>Rīga Information (EVRR_I_CTR)</Td>
+      <Td>120.225</Td>
+      <Td>Riga FIZ</Td>
+      <Td>SFC-FL660</Td>
+      <Td>C, G</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVVA RDO</Td>
+      <Td>Ventspils Radio (EVVA_RDO)</Td>
+      <Td>123.950</Td>
+      <Td>Ventspils ATZ</Td>
+      <Td>SFC-1000FT</Td>
+      <Td>G</Td>
+      <Td>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVAD RDO</Td>
+      <Td>Ādaži Radio (EVAD_RDO)</Td>
+      <Td>127.130</Td>
+      <Td>Adazi ATZ</Td>
+      <Td>SFC-1000FT</Td>
+      <Td>G</Td>
+      <Td>NIL</Td>
+    </Tr>
+  </tbody>
+</Table>
+
+## ATIS ATS Units
+
+<Table>
+  <thead className="[&>tr>th]:text-center">
+    <Tr>
+      <Th>Designation</Th>
+      <Th>Callsign</Th>
+      <Th>Frequency (MHz)</Th>
+      <Th>AoR</Th>
+      <Th>Vertical Limits</Th>
+      <Th>Airspace Class</Th>
+      <Th>Remarks</Th>
+    </Tr>
+  </thead>
+  <tbody className="[&>tr>td]:text-center">
+    <Tr>
+      <Td>EVRA ATIS</Td>
+      <Td>Rīga ATIS (EVRA_ATIS)</Td>
+      <Td>120.180 (120.175)</Td>
+      <Td colSpan={4}>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVVA ATIS</Td>
+      <Td>Ventspils ATIS (EVVA_ATIS)</Td>
+      <Td>126.805 (126.800)</Td>
+      <Td colSpan={4}>NIL</Td>
+    </Tr>
+    <Tr>
+      <Td>EVGA ATIS</Td>
+      <Td>Lielvāŗde ATIS (EVGA_ATIS)</Td>
+      <Td>124.805 (124.800)</Td>
+      <Td colSpan={3}>NIL</Td>
+      <Td>Military Airfield</Td>
+    </Tr>
+  </tbody>
+</Table>

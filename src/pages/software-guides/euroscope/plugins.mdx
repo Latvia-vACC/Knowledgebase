@@ -13,6 +13,39 @@ Further reading, plugin updates and in-depth guides are available on [VATSIM Sca
 
 TopSky is an equivalent of a real life radar software modification that is used for complex analysis of radar airspace. This plugin assists controllers in EVRR FIR to pre-plan their actions and provide appropriate separation to traffic within the FIR. The plugin also incorporates NOTAM-tracking, display of AMC managed airspace segments, and DCL/CPDLC functions.
 
+### Connection to the Datalink
+
+A controller providing datalink services shall establish a datalink connection as soon as reasonably practicable after beginning of their session. The connection can be established through the TopSky settings ribbon on the radar control view of the sector file (hotkey <kbd>`F1`</kbd> and then <kbd>`1`</kbd>). The connection dialog is available by accessing the "Settings" menu and clicking the "CPDLC Setting" button. A visual representation is provided below.
+
+![TopSky grey ribbon with the "Settings" and "CPDLC Setting" buttons highlighted](../../../img/datalink_connection.png)
+
+ATS units providing PDC services shall adhere to the following instructions. A visual representation is provided further.
+
+- Logon code `EVRA` must be used.
+- `DCL/PDC` services shall be enabled (without automatic issuance), `CPDLC` services shall be disabled.
+
+![TopSky "CPDLC Setting" dialog, configured for PDC services](../../../img/datalink_pdc.png)
+
+ATS units providing CPDLC services shall adhere to the following instructions. A visual representation is provided further.
+
+- Logon code shall match the respective ATS unit's radar sector.
+- `DCL/PDC` services shall be enabled (without automatic issuance), `CPDLC` services shall be enabled (without automatic establishment of connections).
+
+![TopSky "CPDLC Setting" dialog, configured for CPDLC services](../../../img/datalink_cpdlc.png)
+
+An exhaustive table of appropriate DCL logon codes is shown below.
+
+| Type of Service |        ATS Unit (Sector)         | Logon Code |
+| :-------------: | :------------------------------: | :--------: |
+|       PDC       |          EVRA GMC (NIL)          |    EVRA    |
+|       PDC       |       EVRA TWR (Riga CTR)        |    EVRA    |
+|       PDC       | EVRA APS (Riga TMA, all sectors) |    EVRA    |
+|      CPDLC      |        EVRR ACS (Bandbox)        |    EVRR    |
+|      CPDLC      |         EVRR ACS (North)         |    EVRN    |
+|      CPDLC      |         EVRR ACS (South)         |    EVRS    |
+|      CPDLC      |         EVRR ACS (East)          |    EVRE    |
+|      CPDLC      |         EVRR ACS (West)          |    EVRW    |
+
 ## Ground Radar Plugin
 
 This plugin is required for maintaining a systematic approach to Ground Movement Control. It includes such features as selective label drawing, automatic stand assignments and additional view display for GMC ATCOs.
