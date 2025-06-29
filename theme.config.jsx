@@ -57,7 +57,7 @@ const themeConfig = {
   },
   footer: {
     content: (
-      <div className="flex w-full gap-20">
+      <div className="flex w-full flex-wrap gap-20">
         <div className="flex flex-col gap-1 tracking-wide">
           <h4 className="font-bold">vACC Resources</h4>
           <Link
