@@ -159,6 +159,37 @@ const themeConfig = {
         />
         <meta property="og:title" content={frontMatter.title} />
         <meta property="og:description" content={frontMatter.description} />
+        <meta
+          property="og:site_name"
+          content={`Latvia vACC Knowledgebase${asPath === "/" ? "" : ` ${frontMatter.title}`}`}
+        />
+        <meta
+          property="og:image:alt"
+          content={`Latvia vACC Knowledgebase${asPath === "/" ? "" : ` ${frontMatter.title}`}`}
+        />
+        <meta property="og:image:width" content="1920" />
+        <meta property="og:image:height" content="1080" />
+        <meta property="og:image:type" content="image/png" />
+        <meta
+          property="twitter:title"
+          content={`Latvia vACC Knowledgebase${asPath === "/" ? "" : ` ${frontMatter.title}`}`}
+        />
+        <meta
+          property="twitter:description"
+          content={frontMatter.description}
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:image"
+          content={`https://kb.lv-vacc.org/api/og?title=${asPath === "/" ? "" : frontMatter.title}&logoOnly=${asPath === "/" ? 1 : 0}`}
+        />
+        <meta
+          property="twitter:image:alt"
+          content={`Latvia vACC Knowledgebase${asPath === "/" ? "" : ` ${frontMatter.title}`}`}
+        />
+        <meta property="twitter:image:width" content="1920" />
+        <meta property="twitter:image:height" content="1080" />
+        <meta property="twitter:image:type" content="image/png" />
       </>
     );
   },
