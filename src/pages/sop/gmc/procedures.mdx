@@ -41,8 +41,16 @@ The preferential runway system is applied as follows (time given in Rīga local 
 
 All aircraft must be assigned a valid SSR code. In Riga FIR, the following squawk ranges apply:
 
-- **4300 – 4377** for all international flights;
+- **4300 – 4377** for all international flights[<span className="text-red-500 remove-parent-underline">\*</span>](#mode-s-correlation);
 - **0060 – 0077** for all domestic flights (including domestic VFR).
+
+<div
+  role="p"
+  id="mode-s-correlation"
+  className={"_leading-7 [&:not(:first-child)]:_mt-6"}
+>
+  <span className="text-red-500">\*</span> Latvijas Gaisa Satiksme (LGS) as an ATS provider participates in the Europe-wide initiative to ensure issuance of unique SSR codes. Therefore the range allocated for international flights is used as a reserve range, should internationally coordinated methods of issuing unique SSR codes be inoperable. Additionally, Mode S identification is available in EVRR FIR, thus SSR code 1000 can be deemed a unique code for aircraft departing to or arriving from a limited list of destinations.
+</div>
 
 ### Flight Plan Validation
 
